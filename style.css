@@ -1,1 +1,4 @@
-body { background:#0f172a; color:white; font-family:sans-serif }
+body { font-family: sans-serif; background: #0f172a; color: white }
+table { width: 100%; border-collapse: collapse }
+td, th { padding: 8px; border-bottom: 1px solid #334155 }
+a { color: #38bdf8 }
