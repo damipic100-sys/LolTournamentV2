@@ -6,10 +6,10 @@ export default async function handler(req, res) {
   // Agrega aquí tus usuarios reales
   const users = [
     { gameName: "Lushoto", tagLine: "uwu" },
-    { gameName: "Gwungle Account", tagLine: "LAS" },
-    { gameName: "Aśoka Vardhana", tagLine: "HDS" },
+    { gameName: "GwungleAccount", tagLine: "LAS" },
+    { gameName: "AśokaVardhana", tagLine: "HDS" },
     { gameName: "ZeeKy", tagLine: "1919" },
-    { gameName: "Tobi Soabe", tagLine: "las" },
+    { gameName: "TobiSoabe", tagLine: "las" },
     { gameName: "FernecitoConCoca", tagLine: "ARG" },
     { gameName: "Cork", tagLine: "crazy" },
     { gameName: "germen", tagLine: "ÆRN4N" }
@@ -58,5 +58,6 @@ export default async function handler(req, res) {
     res.status(500).json({ error: "Error critico en el servidor", message: globalError.message });
   }
 }
+
 
 
