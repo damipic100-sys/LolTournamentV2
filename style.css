@@ -1,0 +1,58 @@
+body {
+    background-color: #0a0e13; /* Fondo oscuro tipo cliente de LoL */
+    color: #f0e6d2; /* Dorado pálido para texto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    color: #c89b3c; /* Dorado brillante */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1e2328; /* Gris azulado oscuro */
+    border: 1px solid #463714;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+th {
+    background-color: #111;
+    color: #a09b8c;
+    padding: 15px;
+    text-align: left;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #3c3c41;
+}
+
+tr:hover {
+    background-color: #2a2f35; /* Efecto hover simple */
+}
+
+/* Colores por Tier (Opcional) */
+.challenger { color: #f4c47d; font-weight: bold; }
+.diamond { color: #576bce; }
+.platinum { color: #4e9996; }
+.gold { color: #d4af37; }
+.unranked { color: #888; opacity: 0.7; }
+
+/* Responsive */
+@media (max-width: 600px) {
+    th:nth-child(4), td:nth-child(4) { display: none; } /* Oculta PL en móviles para ahorrar espacio */
+}
