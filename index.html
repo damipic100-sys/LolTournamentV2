@@ -1,0 +1,30 @@
+const rankOrder = { "CHALLENGER": 9, "GRANDMASTER": 8, "MASTER": 7, "DIAMOND": 6, "EMERALD": 6, "PLATINUM": 5, "GOLD": 4, "SILVER": 3, "BRONZE": 2, "IRON": 1, "UNRANKED": 0 };
+
+async function loadLadder() {
+    try {
+        const response = await fetch('/api/get-ladder');
+        const data = await response.json();
+
+        // Ordenar lógica: Rango -> PL
+        data.sort((a, b) => {
+            if (rankOrder[a.tier] !== rankOrder[b.tier]) {
+                return rankOrder[b.tier] - rankOrder[a.tier];
+            }
+            return b.leaguePoints - a.leaguePoints;
+        });
+
+        const body = document.getElementById('ladder-body');
+        body.innerHTML = data.map((user, index) => `
+            <tr class="${user.tier.toLowerCase()}">
+                <td>#${index + 1}</td>
+                <td style="font-weight: bold; color: #fff;">${user.name}</td>
+                <td>${user.tier} ${user.rank}</td>
+                <td>${user.leaguePoints} <span style="font-size: 0.8em; color: #a09b8c;">PL</span></td>
+                <td><span style="color: #2ecc71;">${user.wins}W</span> / <span style="color: #e74c3c;">${user.losses}L</span></td>
+            </tr>
+        `).join('');
+    } catch (e) {
+        console.error("Error cargando la ladder", e);
+    }
+}
+loadLadder();
