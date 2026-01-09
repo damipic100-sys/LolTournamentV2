@@ -1,45 +1,43 @@
 export default async function handler(req, res) {
   const API_KEY = process.env.RIOT_API_KEY;
-  const cluster = "americas"; // Routing para LAS, LAN, NA, BR
-  const platform = "la2";    // LAS configurado correctamente
+  const cluster = "americas"; 
+  const platform = "la2";    
 
-  // Lista de tus usuarios
   const users = [
-    { gameName: "Lushoto", tagLine: "uwu" },
+    { gameName: "Lushoto", tagLine: "LAS" },
     { gameName: "FernecitoConCoca", tagLine: "ARG" }
   ];
 
   try {
     const results = await Promise.all(users.map(async (user) => {
       try {
-        // 1. Obtener PUUID (Account-v1)
+        // 1. Obtener PUUID
         const resAccount = await fetch(`https://${cluster}.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${encodeURIComponent(user.gameName)}/${encodeURIComponent(user.tagLine)}?api_key=${API_KEY}`);
-        
-        if (!resAccount.ok) {
-          console.error(`Error Account API: ${resAccount.status} para ${user.gameName}`);
-          return { name: `${user.gameName}#${user.tagLine}`, tier: 'ERROR', rank: '', leaguePoints: 0, wins: 0, losses: 0 };
-        }
         const accountData = await resAccount.json();
 
-        // 2. Obtener SummonerID usando el PUUID (Summoner-v4)
+        if (accountData.status) {
+          console.error(`Error en Account API (${user.gameName}):`, accountData.status.message);
+          return { name: `${user.gameName}#${user.tagLine}`, tier: 'API_ERROR', rank: '', leaguePoints: 0, wins: 0, losses: 0 };
+        }
+
+        // 2. Obtener SummonerID
         const resSummoner = await fetch(`https://${platform}.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${accountData.puuid}?api_key=${API_KEY}`);
         const summonerData = await resSummoner.json();
 
-        // 3. Obtener Liga (League-v4)
+        // 3. Obtener Liga
         const resLeague = await fetch(`https://${platform}.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerData.id}?api_key=${API_KEY}`);
         const leagueData = await resLeague.json();
 
-        // LOG PARA DEBUG: Esto aparecerá en tus logs de Vercel
-        console.log(`Datos crudos de ${user.gameName}:`, JSON.stringify(leagueData));
+        // VALIDACIÓN CRUCIAL: Si leagueData no es un array, es un error de Riot
+        if (!Array.isArray(leagueData)) {
+          console.error(`Riot respondió con error para ${user.gameName}:`, leagueData);
+          return { name: `${user.gameName}#${user.tagLine}`, tier: 'UNRANKED', rank: '', leaguePoints: 0, wins: 0, losses: 0 };
+        }
 
-        // Buscar específicamente SoloQ
         const soloQ = leagueData.find(m => m.queueType === 'RANKED_SOLO_5x5');
 
         if (!soloQ) {
-          return { 
-            name: `${user.gameName}#${user.tagLine}`, 
-            tier: 'UNRANKED', rank: '', leaguePoints: 0, wins: 0, losses: 0 
-          };
+          return { name: `${user.gameName}#${user.tagLine}`, tier: 'UNRANKED', rank: '', leaguePoints: 0, wins: 0, losses: 0 };
         }
 
         return { 
@@ -52,13 +50,12 @@ export default async function handler(req, res) {
         };
 
       } catch (err) {
-        console.error(`Fallo crítico en usuario ${user.gameName}:`, err);
-        return { name: `${user.gameName}#${user.tagLine}`, tier: 'UNRANKED', rank: '', leaguePoints: 0, wins: 0, losses: 0 };
+        return { name: `${user.gameName}#${user.tagLine}`, tier: 'ERROR', rank: '', leaguePoints: 0, wins: 0, losses: 0 };
       }
     }));
 
     res.status(200).json(results);
   } catch (globalError) {
-    res.status(500).json({ error: "Error de servidor", details: globalError.message });
+    res.status(500).json({ error: "Error de servidor" });
   }
 }
