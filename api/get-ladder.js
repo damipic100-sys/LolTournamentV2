@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   const API_KEY = process.env.RIOT_API_KEY;
   const cluster = "americas"; // Para LAN, LAS, NA, BR
-  const platform = "la1";    // Cambia a "la2" si es LAS
+  const platform = "la2";    // Cambia a "la2" si es LAS
 
   // Agrega aquí tus usuarios reales
   const users = [
@@ -52,3 +52,4 @@ export default async function handler(req, res) {
     res.status(500).json({ error: "Error critico en el servidor", message: globalError.message });
   }
 }
+
