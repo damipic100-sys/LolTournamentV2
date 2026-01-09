@@ -138,8 +138,15 @@
     </table>
 </div>
 
-<script>
-    const rankOrder = { "CHALLENGER": 10, "GRANDMASTER": 9, "MASTER": 8, "DIAMOND": 7, "EMERALD": 6, "PLATINUM": 5, "GOLD": 4, "SILVER": 3, "BRONZE": 2, "IRON": 1, "UNRANKED": 0 };
+<script><script>
+    const rankOrder = { 
+        "CHALLENGER": 10, "GRANDMASTER": 9, "MASTER": 8, "DIAMOND": 7, 
+        "EMERALD": 6, "PLATINUM": 5, "GOLD": 4, "SILVER": 3, 
+        "BRONZE": 2, "IRON": 1, "UNRANKED": 0 
+    };
+
+    // Nueva regla: La división I es mayor que la IV
+    const divisionOrder = { "I": 4, "II": 3, "III": 2, "IV": 1 };
 
     async function loadLadder() {
         try {
@@ -147,7 +154,21 @@
             const data = await response.json();
 
             data.sort((a, b) => {
-                if (rankOrder[a.tier] !== rankOrder[b.tier]) return rankOrder[b.tier] - rankOrder[a.tier];
+                // 1. Comparar por Liga (Tier)
+                if (rankOrder[a.tier] !== rankOrder[b.tier]) {
+                    return rankOrder[b.tier] - rankOrder[a.tier];
+                }
+                
+                // 2. Si están en la misma liga, comparar por División (Rank)
+                // Master+ no tienen división, por eso usamos || 0
+                const divA = divisionOrder[a.rank] || 0;
+                const divB = divisionOrder[b.rank] || 0;
+                
+                if (divA !== divB) {
+                    return divB - divA;
+                }
+
+                // 3. Si están en la misma liga y división, comparar por PL
                 return b.leaguePoints - a.leaguePoints;
             });
 
@@ -156,11 +177,16 @@
                 const tierLower = user.tier.toLowerCase();
                 const total = user.wins + user.losses;
                 const wr = total > 0 ? Math.round((user.wins / total) * 100) : 0;
+                
+                const opggName = user.name.replace('#', '-');
+                const opggUrl = `https://www.op.gg/summoners/la2/${encodeURIComponent(opggName)}`;
 
                 return `
                     <tr class="ladder-row tier-${tierLower}">
                         <td style="color: var(--text-silver); font-weight: bold; width: 40px;">${index + 1}</td>
-                        <td style="width: 250px;"><span class="user-name">${user.name}</span></td>
+                        <td style="width: 250px;">
+                            <a href="${opggUrl}" target="_blank" class="opgg-link">${user.name}</a>
+                        </td>
                         <td><span class="tier-label">${user.tier} ${user.rank}</span></td>
                         <td><span class="pl-value">${user.leaguePoints}</span> <span style="font-size: 0.7rem; color: var(--text-silver);">PL</span></td>
                         <td style="text-align: right;">
@@ -179,7 +205,9 @@
     }
     loadLadder();
 </script>
+</script>
 
 </body>
 </html>
+
 
