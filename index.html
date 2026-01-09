@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BORRALO A LA MIERDA</title>
+    <title>SoloQ Ladder | Minimalist</title>
     <style>
         :root {
             --bg-color: #05070a;
@@ -41,7 +41,7 @@
         .ladder {
             width: 100%;
             border-collapse: separate;
-            border-spacing: 0 10px; /* Separación entre cards */
+            border-spacing: 0 10px;
         }
 
         th {
@@ -53,20 +53,17 @@
             letter-spacing: 2px;
         }
 
-        /* Estructura de la Card */
         .ladder-row {
             height: 70px;
-            transition: transform 0.2s ease;
         }
 
         .ladder-row td {
             padding: 0 20px;
-            background-color: transparent; /* Importante para ver el fondo del TR */
+            background-color: transparent;
             border-top: 1px solid rgba(255,255,255,0.05);
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* Bordes redondeados y borde lateral */
         .ladder-row td:first-child { 
             border-left: 4px solid #444; 
             border-top-left-radius: 6px; 
@@ -78,36 +75,39 @@
             border-bottom-right-radius: 6px; 
         }
 
-        /* CONFIGURACIÓN DE DEGRADADOS UNIFICADOS (Aplicados al TR) */
-        /* Nota: Para que el degradado funcione en un TR, usamos background-attachment o fondos lineares específicos */
-        
+        /* Degradados unificados */
         .ladder-row { background: var(--card-base); }
-
         .tier-challenger { background: linear-gradient(90deg, rgba(244,196,125,0.2) 0%, var(--card-base) 60%) !important; }
         .tier-challenger td:first-child { border-left-color: #f4c47d; }
-
         .tier-grandmaster { background: linear-gradient(90deg, rgba(239,68,68,0.2) 0%, var(--card-base) 60%) !important; }
         .tier-grandmaster td:first-child { border-left-color: #ef4444; }
-
         .tier-master { background: linear-gradient(90deg, rgba(157,80,187,0.2) 0%, var(--card-base) 60%) !important; }
         .tier-master td:first-child { border-left-color: #9d50bb; }
-
         .tier-diamond { background: linear-gradient(90deg, rgba(87,107,206,0.2) 0%, var(--card-base) 60%) !important; }
         .tier-diamond td:first-child { border-left-color: #576bce; }
-
         .tier-emerald { background: linear-gradient(90deg, rgba(46,204,113,0.2) 0%, var(--card-base) 60%) !important; }
         .tier-emerald td:first-child { border-left-color: #2ecc71; }
-
         .tier-platinum { background: linear-gradient(90deg, rgba(78,153,150,0.2) 0%, var(--card-base) 60%) !important; }
         .tier-platinum td:first-child { border-left-color: #4e9996; }
-
         .tier-gold { background: linear-gradient(90deg, rgba(212,175,55,0.2) 0%, var(--card-base) 60%) !important; }
         .tier-gold td:first-child { border-left-color: #d4af37; }
-
         .tier-silver { background: linear-gradient(90deg, rgba(160,155,140,0.15) 0%, var(--card-base) 60%) !important; }
         .tier-silver td:first-child { border-left-color: #a09b8c; }
 
-        .user-name { font-weight: bold; font-size: 1.1rem; color: #fff; }
+        /* Estilo del Enlace (Nombres en Blanco) */
+        .opgg-link {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #ffffff !important; /* Fuerza el color blanco */
+            transition: color 0.2s ease;
+        }
+
+        .opgg-link:hover {
+            color: var(--text-gold) !important; /* Cambia a dorado al pasar el mouse */
+            text-decoration: none;
+        }
+
         .tier-label { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: #eee; }
         .pl-value { font-size: 1.2rem; font-weight: bold; color: #fff; }
         .win { color: var(--win-color); font-weight: bold; }
@@ -120,10 +120,8 @@
 <body>
 
 <div class="container">
-    <h1>LA FOKIN LADDER</h1>
-    
+    <h1>SoloQ Ladder</h1>
     <div id="loading">Cargando...</div>
-
     <table class="ladder hidden" id="ladder-table">
         <thead>
             <tr>
@@ -139,13 +137,7 @@
 </div>
 
 <script>
-    const rankOrder = { 
-        "CHALLENGER": 10, "GRANDMASTER": 9, "MASTER": 8, "DIAMOND": 7, 
-        "EMERALD": 6, "PLATINUM": 5, "GOLD": 4, "SILVER": 3, 
-        "BRONZE": 2, "IRON": 1, "UNRANKED": 0 
-    };
-
-    // Nueva regla: La división I es mayor que la IV
+    const rankOrder = { "CHALLENGER": 10, "GRANDMASTER": 9, "MASTER": 8, "DIAMOND": 7, "EMERALD": 6, "PLATINUM": 5, "GOLD": 4, "SILVER": 3, "BRONZE": 2, "IRON": 1, "UNRANKED": 0 };
     const divisionOrder = { "I": 4, "II": 3, "III": 2, "IV": 1 };
 
     async function loadLadder() {
@@ -153,22 +145,14 @@
             const response = await fetch('ladder_data.json');
             const data = await response.json();
 
+            // Lógica de ordenamiento corregida (Tier > División > PL)
             data.sort((a, b) => {
-                // 1. Comparar por Liga (Tier)
-                if (rankOrder[a.tier] !== rankOrder[b.tier]) {
-                    return rankOrder[b.tier] - rankOrder[a.tier];
-                }
+                if (rankOrder[a.tier] !== rankOrder[b.tier]) return rankOrder[b.tier] - rankOrder[a.tier];
                 
-                // 2. Si están en la misma liga, comparar por División (Rank)
-                // Master+ no tienen división, por eso usamos || 0
                 const divA = divisionOrder[a.rank] || 0;
                 const divB = divisionOrder[b.rank] || 0;
-                
-                if (divA !== divB) {
-                    return divB - divA;
-                }
+                if (divA !== divB) return divB - divA;
 
-                // 3. Si están en la misma liga y división, comparar por PL
                 return b.leaguePoints - a.leaguePoints;
             });
 
@@ -208,6 +192,3 @@
 
 </body>
 </html>
-
-
-
