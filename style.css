@@ -51,8 +51,25 @@ tr:hover {
 .platinum { color: #4e9996; }
 .gold { color: #d4af37; }
 .unranked { color: #888; opacity: 0.7; }
+/* Estilo base para todas las filas */
+tr {
+    transition: transform 0.2s ease;
+}
 
+/* Colores de fondo según el rango */
+.tier-challenger { background: linear-gradient(90deg, rgba(244,196,125,0.1) 0%, rgba(30,35,40,1) 100%); border-left: 4px solid #f4c47d; }
+.tier-grandmaster { background: linear-gradient(90deg, rgba(239,68,68,0.1) 0%, rgba(30,35,40,1) 100%); border-left: 4px solid #ef4444; }
+.tier-master { background: linear-gradient(90deg, rgba(157,80,187,0.1) 0%, rgba(30,35,40,1) 100%); border-left: 4px solid #9d50bb; }
+.tier-diamond { background: linear-gradient(90deg, rgba(87,107,206,0.1) 0%, rgba(30,35,40,1) 100%); border-left: 4px solid #576bce; }
+.tier-emerald { background: linear-gradient(90deg, rgba(46,204,113,0.1) 0%, rgba(30,35,40,1) 100%); border-left: 4px solid #2ecc71; }
+.tier-platinum { background: linear-gradient(90deg, rgba(78,153,150,0.1) 0%, rgba(30,35,40,1) 100%); border-left: 4px solid #4e9996; }
+.tier-gold { background: linear-gradient(90deg, rgba(212,175,55,0.1) 0%, rgba(30,35,40,1) 100%); border-left: 4px solid #d4af37; }
+.tier-silver { background: linear-gradient(90deg, rgba(160,155,140,0.1) 0%, rgba(30,35,40,1) 100%); border-left: 4px solid #a09b8c; }
+.tier-bronze { background: linear-gradient(90deg, rgba(164,102,40,0.1) 0%, rgba(30,35,40,1) 100%); border-left: 4px solid #a46628; }
+.tier-iron { background: linear-gradient(90deg, rgba(84,84,84,0.1) 0%, rgba(30,35,40,1) 100%); border-left: 4px solid #545454; }
+.tier-unranked { background: #1a1a1a; border-left: 4px solid #444; opacity: 0.8; }
 /* Responsive */
 @media (max-width: 600px) {
     th:nth-child(4), td:nth-child(4) { display: none; } /* Oculta PL en móviles para ahorrar espacio */
 }
+
