@@ -3,13 +3,12 @@ export default async function handler(req, res) {
   // Cambia la región según donde jueguen (americas, europe, asia)
   const cluster = "americas"; 
   // Cambia la plataforma según el servidor (la1, la2, na1, br1)
-  const platform = "la1"; 
+  const platform = "la2"; 
 
   // Lista de tus usuarios con sus Tags
   const users = [
-    { gameName: "Jorgito", tagLine: "LAN" },
-    { gameName: "ElRayos", tagLine: "LAS" },
-    { gameName: "ProPlayer", tagLine: "1234" }
+    { gameName: "Lushoto", tagLine: "uwu" },
+    { gameName: "Gwungle Account", tagLine: "ARG" }
   ];
 
   try {
@@ -47,3 +46,4 @@ export default async function handler(req, res) {
     res.status(500).json({ error: "Error en la conexión con Riot" });
   }
 }
+
