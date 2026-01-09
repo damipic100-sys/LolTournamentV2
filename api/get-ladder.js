@@ -1,4 +1,16 @@
 export default async function handler(req, res) {
+  const rawKey = process.env.RIOT_API_KEY;
+  const API_KEY = rawKey ? rawKey.trim() : "";
+
+  // LOG DE SEGURIDAD: Verás esto en los Logs de Vercel
+  if (!API_KEY) {
+    console.error("ERROR: La variable RIOT_API_KEY está vacía en Vercel");
+  } else {
+    console.log(`Key detectada. Empieza con: ${API_KEY.substring(0, 7)}...`);
+  }
+  
+  // ... resto del código
+export default async function handler(req, res) {
 const API_KEY = process.env.RIOT_API_KEY ? process.env.RIOT_API_KEY.trim() : "";
   const cluster = "americas"; 
   const platform = "la2";    
@@ -59,4 +71,5 @@ const API_KEY = process.env.RIOT_API_KEY ? process.env.RIOT_API_KEY.trim() : "";
     res.status(500).json({ error: "Error de servidor" });
   }
 }
+
 
