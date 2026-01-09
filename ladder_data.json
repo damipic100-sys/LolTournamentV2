@@ -44,16 +44,16 @@
     "tier": "UNRANKED",
     "rank": "0",
     "leaguePoints": 0,
-    "wins": 0,
-    "losses": 0
+    "wins": 1,
+    "losses": 1
   },
   {
     "name": "Cork#crazy",
-    "tier": "UNRANKED",
-    "rank": "0",
-    "leaguePoints": 0,
-    "wins": 0,
-    "losses": 0
+    "tier": "PLATINUM",
+    "rank": "II",
+    "leaguePoints": 55,
+    "wins": 3,
+    "losses": 2
   },
   {
     "name": "Germen#ÆRN4N",
@@ -66,10 +66,10 @@
   {
     "name": "grande y grueso#7518",
     "tier": "SILVER",
-    "rank": "III",
-    "leaguePoints": 10,
+    "rank": "II",
+    "leaguePoints": 0,
     "wins": 2,
-    "losses": 3
+    "losses": 4
   },
   {
     "name": "Trastornado#FKC",
@@ -89,6 +89,14 @@
   },
   {
     "name": "alejandro magno#HDS",
+    "tier": "BRONZE",
+    "rank": "II",
+    "leaguePoints": 90,
+    "wins": 2,
+    "losses": 4
+  },
+  {
+    "name": "MatiC3#CDE",
     "tier": "UNRANKED",
     "rank": "0",
     "leaguePoints": 0,
@@ -96,7 +104,7 @@
     "losses": 0
   },
   {
-    "name": "MatiC3#CDE",
+    "name": "el extraño caso#er9",
     "tier": "UNRANKED",
     "rank": "0",
     "leaguePoints": 0,
