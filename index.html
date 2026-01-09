@@ -163,7 +163,7 @@
                 const wr = total > 0 ? Math.round((user.wins / total) * 100) : 0;
                 
                 const opggName = user.name.replace('#', '-');
-                const opggUrl = `https://www.op.gg/summoners/la2/${encodeURIComponent(opggName)}`;
+                const opggUrl = `https://www.op.gg/summoners/las/${encodeURIComponent(opggName)}`;
 
                 return `
                     <tr class="ladder-row tier-${tierLower}">
@@ -192,3 +192,4 @@
 
 </body>
 </html>
+
