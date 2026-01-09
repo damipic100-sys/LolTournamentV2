@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   // Lista de tus usuarios con sus Tags
   const users = [
     { gameName: "Lushoto", tagLine: "uwu" },
-    { gameName: "Gwungle Account", tagLine: "ARG" }
+    { gameName: "GwungleAccount", tagLine: "ARG" }
   ];
 
   try {
@@ -46,4 +46,5 @@ export default async function handler(req, res) {
     res.status(500).json({ error: "Error en la conexión con Riot" });
   }
 }
+
 
