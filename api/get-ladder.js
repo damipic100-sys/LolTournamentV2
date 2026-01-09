@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  const API_KEY = process.env.RIOT_API_KEY;
+const API_KEY = process.env.RIOT_API_KEY ? process.env.RIOT_API_KEY.trim() : "";
   const cluster = "americas"; 
   const platform = "la2";    
 
@@ -59,3 +59,4 @@ export default async function handler(req, res) {
     res.status(500).json({ error: "Error de servidor" });
   }
 }
+
