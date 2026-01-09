@@ -114,60 +114,41 @@
 </div>
 
 <script>
-    // Valor numérico para ordenar los rangos
-    const rankOrder = { 
-        "CHALLENGER": 10, "GRANDMASTER": 9, "MASTER": 8, 
-        "DIAMOND": 7, "EMERALD": 6, "PLATINUM": 5, 
-        "GOLD": 4, "SILVER": 3, "BRONZE": 2, 
-        "IRON": 1, "UNRANKED": 0, "NOT_FOUND": -1 
-    };
+  async function loadLadder() {
+    try {
+        // Ahora cargamos el archivo JSON local en lugar de la API
+        const response = await fetch('ladder_data.json');
+        const data = await response.json();
 
-    async function loadLadder() {
-        const loadingDiv = document.getElementById('loading');
-        const table = document.getElementById('ladder-table');
+        // Ordenar (Igual que antes)
+        const rankOrder = { "CHALLENGER": 10, "GRANDMASTER": 9, "MASTER": 8, "DIAMOND": 7, "EMERALD": 6, "PLATINUM": 5, "GOLD": 4, "SILVER": 3, "BRONZE": 2, "IRON": 1, "UNRANKED": 0 };
+        
+        data.sort((a, b) => {
+            if (rankOrder[a.tier] !== rankOrder[b.tier]) return rankOrder[b.tier] - rankOrder[a.tier];
+            return b.leaguePoints - a.leaguePoints;
+        });
+
         const body = document.getElementById('ladder-body');
+        body.innerHTML = data.map((user, index) => `
+            <tr class="${user.tier.toLowerCase()}">
+                <td>#${index + 1}</td>
+                <td class="rank-name">${user.name}</td>
+                <td class="tier-text">${user.tier} ${user.rank}</td>
+                <td>${user.leaguePoints} PL</td>
+                <td><span class="win">${user.wins}W</span> / <span class="loss">${user.losses}L</span></td>
+            </tr>
+        `).join('');
 
-        try {
-            // Llamada a la API local (Vercel Function)
-            const response = await fetch('/api/get-ladder');
-            const data = await response.json();
-
-            // Ordenar: Rango (Tier) > Puntos de Liga (PL)
-            data.sort((a, b) => {
-                if (rankOrder[a.tier] !== rankOrder[b.tier]) {
-                    return rankOrder[b.tier] - rankOrder[a.tier];
-                }
-                return b.leaguePoints - a.leaguePoints;
-            });
-
-            // Generar filas
-            body.innerHTML = data.map((user, index) => `
-                <tr class="${user.tier.toLowerCase()}">
-                    <td style="color: #a09b8c;">${index + 1}</td>
-                    <td class="rank-name">${user.name}</td>
-                    <td class="tier-text">${user.tier} ${user.rank || ''}</td>
-                    <td class="pl-text"><strong>${user.leaguePoints}</strong> PL</td>
-                    <td>
-                        <span class="win">${user.wins}W</span> 
-                        <span style="color: #444;">|</span> 
-                        <span class="loss">${user.losses}L</span>
-                    </td>
-                </tr>
-            `).join('');
-
-            loadingDiv.classList.add('hidden');
-            table.classList.remove('hidden');
-
-        } catch (error) {
-            loadingDiv.innerHTML = "⚠️ Error al cargar los datos. Verifica tu API Key.";
-            console.error(error);
-        }
+        document.getElementById('loading').classList.add('hidden');
+        document.getElementById('ladder-table').classList.remove('hidden');
+    } catch (error) {
+        console.error("Error cargando el JSON:", error);
     }
-
-    // Ejecutar al cargar la página
-    loadLadder();
+}
+loadLadder();
 </script>
 
 </body>
 </html>
+
 
