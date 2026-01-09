@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoloQ Ladder | Competitivo</title>
+    <title>SoloQ Ladder | Premium Edition</title>
     <style>
         :root {
-            --bg-color: #05070a;
-            --card-bg: #12171c;
+            --bg-color: #010a13;
+            --card-bg: rgba(30, 35, 40, 0.5);
             --text-gold: #c89b3c;
             --text-silver: #a09b8c;
             --win-color: #2ecc71;
@@ -17,9 +17,9 @@
         body {
             background-color: var(--bg-color);
             color: #f0e6d2;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 40px 10px;
+            padding: 40px 15px;
             display: flex;
             justify-content: center;
         }
@@ -33,96 +33,107 @@
             text-align: center;
             color: var(--text-gold);
             text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: 40px;
-            text-shadow: 0 0 10px rgba(200, 155, 60, 0.3);
+            letter-spacing: 5px;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+            text-shadow: 0 0 15px rgba(200, 155, 60, 0.4);
         }
 
         .ladder {
             width: 100%;
             border-collapse: separate;
-            border-spacing: 0 8px; /* Espacio entre las "cards" */
+            border-spacing: 0 12px;
         }
 
         th {
             color: var(--text-silver);
             text-transform: uppercase;
-            font-size: 0.75rem;
-            padding: 10px 20px;
+            font-size: 0.8rem;
+            padding: 0 25px 10px;
             text-align: left;
+            letter-spacing: 1px;
         }
 
-        /* Estilo Base de las Filas (Cards) */
-        tr td {
-            padding: 15px 20px;
-            background: var(--card-bg);
-            border-top: 1px solid #2a2f35;
-            border-bottom: 1px solid #2a2f35;
+        /* Estilo de la Fila/Card */
+        .ladder-row td {
+            padding: 20px;
+            border-top: 1px solid rgba(200, 155, 60, 0.1);
+            border-bottom: 1px solid rgba(200, 155, 60, 0.1);
+            background-color: #12171c; /* Fondo sólido por defecto */
         }
 
-        tr td:first-child { 
-            border-left: 4px solid #444; 
-            border-top-left-radius: 4px; 
-            border-bottom-left-radius: 4px; 
+        /* Bordes redondeados */
+        .ladder-row td:first-child { 
+            border-left: 5px solid #444; 
+            border-top-left-radius: 8px; 
+            border-bottom-left-radius: 8px; 
+        }
+        .ladder-row td:last-child { 
+            border-right: 1px solid rgba(200, 155, 60, 0.1);
+            border-top-right-radius: 8px; 
+            border-bottom-right-radius: 8px; 
         }
 
-        tr td:last-child { 
-            border-right: 1px solid #2a2f35;
-            border-top-right-radius: 4px; 
-            border-bottom-right-radius: 4px; 
+        /* CONFIGURACIÓN DE DEGRADADOS (Aplicado a cada celda para que se vea continuo) */
+        .tier-challenger td { background: linear-gradient(90deg, rgba(244,196,125,0.15) 0%, #12171c 100%); border-left-color: #f4c47d !important; }
+        .tier-grandmaster td { background: linear-gradient(90deg, rgba(239,68,68,0.15) 0%, #12171c 100%); border-left-color: #ef4444 !important; }
+        .tier-master td { background: linear-gradient(90deg, rgba(157,80,187,0.15) 0%, #12171c 100%); border-left-color: #9d50bb !important; }
+        .tier-diamond td { background: linear-gradient(90deg, rgba(87,107,206,0.15) 0%, #12171c 100%); border-left-color: #576bce !important; }
+        .tier-emerald td { background: linear-gradient(90deg, rgba(46,204,113,0.15) 0%, #12171c 100%); border-left-color: #2ecc71 !important; }
+        .tier-platinum td { background: linear-gradient(90deg, rgba(78,153,150,0.15) 0%, #12171c 100%); border-left-color: #4e9996 !important; }
+        .tier-gold td { background: linear-gradient(90deg, rgba(212,175,55,0.15) 0%, #12171c 100%); border-left-color: #d4af37 !important; }
+        .tier-silver td { background: linear-gradient(90deg, rgba(160,155,140,0.1) 0%, #12171c 100%); border-left-color: #a09b8c !important; }
+
+        /* Iconos de Rango Grandes */
+        .rank-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
-
-        /* Colores Dinámicos por Elo */
-        .tier-challenger td:first-child { border-left-color: #f4c47d; }
-        .tier-challenger { background: linear-gradient(90deg, rgba(244,196,125,0.1) 0%, rgba(18,23,28,1) 100%); }
-
-        .tier-grandmaster td:first-child { border-left-color: #ef4444; }
-        .tier-grandmaster { background: linear-gradient(90deg, rgba(239,68,68,0.1) 0%, rgba(18,23,28,1) 100%); }
-
-        .tier-master td:first-child { border-left-color: #9d50bb; }
-        .tier-master { background: linear-gradient(90deg, rgba(157,80,187,0.1) 0%, rgba(18,23,28,1) 100%); }
-
-        .tier-diamond td:first-child { border-left-color: #576bce; }
-        .tier-diamond { background: linear-gradient(90deg, rgba(87,107,206,0.1) 0%, rgba(18,23,28,1) 100%); }
-
-        .tier-emerald td:first-child { border-left-color: #2ecc71; }
-        .tier-emerald { background: linear-gradient(90deg, rgba(46,204,113,0.1) 0%, rgba(18,23,28,1) 100%); }
-
-        .tier-platinum td:first-child { border-left-color: #4e9996; }
-        .tier-platinum { background: linear-gradient(90deg, rgba(78,153,150,0.1) 0%, rgba(18,23,28,1) 100%); }
-
-        .tier-gold td:first-child { border-left-color: #d4af37; }
-        .tier-gold { background: linear-gradient(90deg, rgba(212,175,55,0.1) 0%, rgba(18,23,28,1) 100%); }
-
-        .tier-silver td:first-child { border-left-color: #a09b8c; }
-        .tier-bronze td:first-child { border-left-color: #a46628; }
-        .tier-iron td:first-child { border-left-color: #545454; }
 
         .rank-icon {
-            width: 32px;
-            height: 32px;
-            vertical-align: middle;
-            margin-right: 12px;
+            width: 50px; /* Tamaño aumentado */
+            height: 50px;
+            filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
         }
 
         .user-name {
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: #fff;
+            display: block;
         }
 
         .tier-label {
-            font-weight: 600;
-            letter-spacing: 0.5px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pl-value {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #f0e6d2;
+        }
+
+        .winrate-container {
+            text-align: right;
         }
 
         .win { color: var(--win-color); font-weight: bold; }
         .loss { color: var(--loss-color); }
-        .pl-text { color: var(--text-silver); font-size: 0.8rem; }
-
-        #loading { text-align: center; padding: 50px; color: var(--text-gold); }
+        
+        #loading { text-align: center; padding: 50px; font-size: 1.2rem; color: var(--text-gold); }
         .hidden { display: none; }
 
+        /* Efecto de hover */
+        .ladder-row:hover td {
+            filter: brightness(1.2);
+            transform: translateY(-2px);
+            transition: all 0.2s ease;
+            cursor: default;
+        }
     </style>
 </head>
 <body>
@@ -130,16 +141,16 @@
 <div class="container">
     <h1>SoloQ Ladder</h1>
     
-    <div id="loading">Cargando rangos...</div>
+    <div id="loading">Sincronizando con los servidores de Riot...</div>
 
     <table class="ladder hidden" id="ladder-table">
         <thead>
             <tr>
-                <th>#</th>
+                <th>Pos</th>
                 <th>Invocador</th>
                 <th>Rango</th>
                 <th>Puntos</th>
-                <th>Winrate</th>
+                <th style="text-align: right;">Winrate</th>
             </tr>
         </thead>
         <tbody id="ladder-body">
@@ -154,13 +165,11 @@
         "BRONZE": 2, "IRON": 1, "UNRANKED": 0 
     };
 
-    async function init() {
+    async function loadLadder() {
         try {
-            // Cargamos el JSON generado por tu script de Node
             const response = await fetch('ladder_data.json');
             const data = await response.json();
 
-            // Ordenar por Elo y luego por PL
             data.sort((a, b) => {
                 if (rankOrder[a.tier] !== rankOrder[b.tier]) {
                     return rankOrder[b.tier] - rankOrder[a.tier];
@@ -171,22 +180,30 @@
             const body = document.getElementById('ladder-body');
             body.innerHTML = data.map((user, index) => {
                 const tierLower = user.tier.toLowerCase();
-                const winrate = user.wins + user.losses > 0 
-                    ? Math.round((user.wins / (user.wins + user.losses)) * 100) 
-                    : 0;
+                const totalGames = user.wins + user.losses;
+                const winrate = totalGames > 0 ? Math.round((user.wins / totalGames) * 100) : 0;
 
                 return `
-                    <tr class="tier-${tierLower}">
-                        <td>#${index + 1}</td>
-                        <td><span class="user-name">${user.name}</span></td>
-                        <td>
-                            <img class="rank-icon" src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-${tierLower}.png" alt="">
-                            <span class="tier-label">${user.tier} ${user.rank}</span>
+                    <tr class="ladder-row tier-${tierLower}">
+                        <td style="font-size: 1.2rem; font-weight: 800; color: var(--text-silver);">
+                            ${index + 1}
                         </td>
-                        <td><strong>${user.leaguePoints}</strong> <span class="pl-text">PL</span></td>
                         <td>
-                            <span class="win">${user.wins}W</span> / <span class="loss">${user.losses}L</span>
-                            <div style="font-size: 0.7rem; color: #666;">${winrate}% Winrate</div>
+                            <span class="user-name">${user.name}</span>
+                        </td>
+                        <td>
+                            <div class="rank-container">
+                                <img class="rank-icon" src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-${tierLower}.png">
+                                <span class="tier-label">${user.tier} ${user.rank}</span>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="pl-value">${user.leaguePoints}</span> 
+                            <span style="color: var(--text-silver); font-size: 0.8rem;">PL</span>
+                        </td>
+                        <td class="winrate-container">
+                            <div><span class="win">${user.wins}W</span> <span class="loss">${user.losses}L</span></div>
+                            <div style="font-size: 0.8rem; font-weight: bold; margin-top: 4px; color: ${winrate >= 50 ? '#2ecc71' : '#e74c3c'}">${winrate}% WR</div>
                         </td>
                     </tr>
                 `;
@@ -196,12 +213,11 @@
             document.getElementById('ladder-table').classList.remove('hidden');
 
         } catch (error) {
-            document.getElementById('loading').innerHTML = "⚠️ No se encontró ladder_data.json o el formato es incorrecto.";
-            console.error(error);
+            document.getElementById('loading').innerHTML = "⚠️ Error: Ejecuta el script de Node primero para generar el JSON.";
         }
     }
 
-    init();
+    loadLadder();
 </script>
 
 </body>
