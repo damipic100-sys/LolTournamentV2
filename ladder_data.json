@@ -9,7 +9,95 @@
   },
   {
     "name": "FernecitoConCoca#ARG",
-    "tier": "ERROR_API",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 1,
+    "losses": 0
+  },
+  {
+    "name": "Gwungle Account#ARG",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 2,
+    "losses": 1
+  },
+  {
+    "name": "Aśoka Vardhana#HDS",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Zeeky#1919",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Tobi Soabe#LAS",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Cork#crazy",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Germen#ÆRN4N",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "grande y grueso#7518",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Trastornado#FKC",
+    "tier": "PLATINUM",
+    "rank": "4",
+    "leaguePoints": 97,
+    "wins": 4,
+    "losses": 1
+  },
+  {
+    "name": "Arturo Illia#ARG",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "alejandro magno#HDS",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "MatiC3#CDE",
+    "tier": "UNRANKED",
     "rank": "0",
     "leaguePoints": 0,
     "wins": 0,
