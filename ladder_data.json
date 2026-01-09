@@ -11,17 +11,17 @@
     "name": "FernecitoConCoca#ARG",
     "tier": "PLATINUM",
     "rank": "I",
-    "leaguePoints": 40,
+    "leaguePoints": 30,
     "wins": 3,
-    "losses": 3
+    "losses": 4
   },
   {
     "name": "Gwungle Account#ARG",
     "tier": "PLATINUM",
     "rank": "II",
-    "leaguePoints": 55,
+    "leaguePoints": 45,
     "wins": 3,
-    "losses": 2
+    "losses": 3
   },
   {
     "name": "Aśoka Vardhana#HDS",
@@ -66,7 +66,7 @@
   {
     "name": "grande y grueso#7518",
     "tier": "SILVER",
-    "rank": "3",
+    "rank": "III",
     "leaguePoints": 10,
     "wins": 2,
     "losses": 3
@@ -75,8 +75,8 @@
     "name": "Trastornado#FKC",
     "tier": "PLATINUM",
     "rank": "III",
-    "leaguePoints": 57,
-    "wins": 6,
+    "leaguePoints": 87,
+    "wins": 7,
     "losses": 1
   },
   {
