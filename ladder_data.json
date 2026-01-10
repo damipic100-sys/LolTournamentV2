@@ -18,10 +18,10 @@
   {
     "name": "Gwungle Account#ARG",
     "tier": "PLATINUM",
-    "rank": "II",
-    "leaguePoints": 45,
-    "wins": 3,
-    "losses": 3
+    "rank": "I",
+    "leaguePoints": 25,
+    "wins": 6,
+    "losses": 4
   },
   {
     "name": "Aśoka Vardhana#HDS",
@@ -50,9 +50,9 @@
   {
     "name": "Cork#crazy",
     "tier": "PLATINUM",
-    "rank": "II",
-    "leaguePoints": 55,
-    "wins": 3,
+    "rank": "I",
+    "leaguePoints": 15,
+    "wins": 5,
     "losses": 2
   },
   {
@@ -74,9 +74,9 @@
   {
     "name": "Trastornado#FKC",
     "tier": "PLATINUM",
-    "rank": "III",
-    "leaguePoints": 87,
-    "wins": 7,
+    "rank": "II",
+    "leaguePoints": 17,
+    "wins": 8,
     "losses": 1
   },
   {
