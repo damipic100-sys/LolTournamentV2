@@ -3,16 +3,16 @@
     "name": "Lushoto#uwu",
     "tier": "GOLD",
     "rank": "III",
-    "leaguePoints": 75,
-    "wins": 5,
-    "losses": 4
+    "leaguePoints": 95,
+    "wins": 6,
+    "losses": 5
   },
   {
     "name": "FernecitoConCoca#ARG",
     "tier": "PLATINUM",
     "rank": "I",
-    "leaguePoints": 30,
-    "wins": 3,
+    "leaguePoints": 40,
+    "wins": 4,
     "losses": 4
   },
   {
@@ -51,9 +51,9 @@
     "name": "Cork#crazy",
     "tier": "PLATINUM",
     "rank": "I",
-    "leaguePoints": 45,
-    "wins": 6,
-    "losses": 2
+    "leaguePoints": 85,
+    "wins": 8,
+    "losses": 4
   },
   {
     "name": "Germen#ÆRN4N",
@@ -74,18 +74,18 @@
   {
     "name": "Trastornado#FKC",
     "tier": "PLATINUM",
-    "rank": "II",
-    "leaguePoints": 97,
-    "wins": 11,
-    "losses": 2
+    "rank": "I",
+    "leaguePoints": 77,
+    "wins": 14,
+    "losses": 3
   },
   {
     "name": "Arturo Illia#ARG",
     "tier": "UNRANKED",
     "rank": "0",
     "leaguePoints": 0,
-    "wins": 0,
-    "losses": 0
+    "wins": 3,
+    "losses": 1
   },
   {
     "name": "alejandro magno#HDS",
@@ -110,5 +110,13 @@
     "leaguePoints": 0,
     "wins": 0,
     "losses": 0
+  },
+  {
+    "name": "Pachu#777",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 2
   }
 ]
