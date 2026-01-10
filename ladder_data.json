@@ -11,17 +11,17 @@
     "name": "FernecitoConCoca#ARG",
     "tier": "PLATINUM",
     "rank": "I",
-    "leaguePoints": 60,
-    "wins": 4,
-    "losses": 4
+    "leaguePoints": 80,
+    "wins": 5,
+    "losses": 5
   },
   {
     "name": "Gwungle Account#ARG",
-    "tier": "PLATINUM",
-    "rank": "I",
-    "leaguePoints": 65,
-    "wins": 8,
-    "losses": 6
+    "tier": "EMERALD",
+    "rank": "IV",
+    "leaguePoints": 15,
+    "wins": 10,
+    "losses": 7
   },
   {
     "name": "Aśoka Vardhana#HDS",
@@ -51,8 +51,8 @@
     "name": "Cork#crazy",
     "tier": "EMERALD",
     "rank": "IV",
-    "leaguePoints": 35,
-    "wins": 10,
+    "leaguePoints": 65,
+    "wins": 11,
     "losses": 5
   },
   {
@@ -75,17 +75,17 @@
     "name": "Trastornado#FKC",
     "tier": "EMERALD",
     "rank": "IV",
-    "leaguePoints": 0,
-    "wins": 15,
+    "leaguePoints": 30,
+    "wins": 16,
     "losses": 4
   },
   {
     "name": "Arturo Illia#ARG",
     "tier": "SILVER",
-    "rank": "II",
-    "leaguePoints": 97,
-    "wins": 4,
-    "losses": 1
+    "rank": "I",
+    "leaguePoints": 67,
+    "wins": 7,
+    "losses": 3
   },
   {
     "name": "alejandro magno#HDS",
