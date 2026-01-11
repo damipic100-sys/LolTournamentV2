@@ -118,5 +118,53 @@
     "leaguePoints": 0,
     "wins": 0,
     "losses": 2
+  },
+  {
+    "name": "Samurai Sword#LAS",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Zair#ZaZa",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Bizkochito#2000",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Chal0#LAS",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Rapisher#LAS",
+    "tier": "UNRANKED",
+    "rank": "0",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Gonzaloo0407#LAS",
+    "tier": "SILVER",
+    "rank": "III",
+    "leaguePoints": 10,
+    "wins": 2,
+    "losses": 3
   }
 ]
