@@ -19,9 +19,9 @@
     "name": "Gwungle Account#ARG",
     "tier": "EMERALD",
     "rank": "IV",
-    "leaguePoints": 15,
-    "wins": 10,
-    "losses": 7
+    "leaguePoints": 35,
+    "wins": 11,
+    "losses": 8
   },
   {
     "name": "Aśoka Vardhana#HDS",
@@ -41,11 +41,11 @@
   },
   {
     "name": "Tobi Soabe#LAS",
-    "tier": "UNRANKED",
-    "rank": "0",
-    "leaguePoints": 0,
-    "wins": 1,
-    "losses": 1
+    "tier": "PLATINUM",
+    "rank": "IV",
+    "leaguePoints": 40,
+    "wins": 3,
+    "losses": 3
   },
   {
     "name": "Cork#crazy",
@@ -56,20 +56,20 @@
     "losses": 5
   },
   {
-    "name": "Germen#ÆRN4N",
-    "tier": "UNRANKED",
-    "rank": "0",
-    "leaguePoints": 0,
+    "name": "we1rdcat#uwu",
+    "tier": "PLATINUM",
+    "rank": "III",
+    "leaguePoints": 90,
     "wins": 0,
-    "losses": 0
+    "losses": 6
   },
   {
     "name": "grande y grueso#7518",
     "tier": "SILVER",
-    "rank": "II",
-    "leaguePoints": 0,
+    "rank": "III",
+    "leaguePoints": 90,
     "wins": 2,
-    "losses": 4
+    "losses": 5
   },
   {
     "name": "Trastornado#FKC",
@@ -105,11 +105,11 @@
   },
   {
     "name": "el extraño caso#er9",
-    "tier": "UNRANKED",
-    "rank": "0",
-    "leaguePoints": 0,
-    "wins": 0,
-    "losses": 0
+    "tier": "SILVER",
+    "rank": "III",
+    "leaguePoints": 10,
+    "wins": 2,
+    "losses": 3
   },
   {
     "name": "Pachu#777",
