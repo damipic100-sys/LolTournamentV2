@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BORRALO A LA MIERDA</title>
+    <title>SoloQ Ladder | Minimalist</title>
     <style>
         :root {
             --bg-color: #05070a;
@@ -34,24 +34,28 @@
             color: var(--text-gold);
             text-transform: uppercase;
             letter-spacing: 6px;
-            margin-bottom: 10px; /* Reducido para el contador */
-            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
         }
 
-        /* ESTILO DEL CONTADOR */
-        #countdown-container {
+        #info-container {
             text-align: center;
             margin-bottom: 40px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-silver);
             letter-spacing: 1px;
             text-transform: uppercase;
+            line-height: 1.8;
         }
 
-        #timer {
+        #timer, .gold-number {
             color: var(--text-gold);
             font-weight: bold;
-            font-variant-numeric: tabular-nums; /* Evita que los números "salten" */
+        }
+
+        .gold-number {
+            font-size: 0.95rem;
+            font-variant-numeric: tabular-nums;
         }
 
         .ladder {
@@ -92,7 +96,7 @@
             border-bottom-right-radius: 6px; 
         }
 
-        /* Degradados por elo */
+        /* Degradados dinámicos por elo */
         .tier-challenger { background: linear-gradient(90deg, rgba(244,196,125,0.2) 0%, var(--card-base) 60%) !important; }
         .tier-challenger td:first-child { border-left-color: #f4c47d; }
         .tier-grandmaster { background: linear-gradient(90deg, rgba(239,68,68,0.2) 0%, var(--card-base) 60%) !important; }
@@ -130,13 +134,11 @@
 <body>
 
 <div class="container">
-    <h1>LA FOKIN LADDER</h1>
+    <h1>SoloQ Ladder</h1>
     
-    <div id="countdown-container">
-        Próxima actualización en: <span id="timer">00:00:00</span>
-    </div>
-    <div id="container">
-        <th>MAXIMO DE PARTIDAS HASTA LA FECHA: 24</th>
+    <div id="info-container">
+        <div>Próxima actualización en: <span id="timer">00:00:00</span></div>
+        <div>Máximo de partidas hasta la fecha: <span class="gold-number">50</span></div>
     </div>
 
     <div id="loading">Cargando...</div>
@@ -156,29 +158,20 @@
 </div>
 
 <script>
-    // --- LÓGICA DEL CONTADOR ---
     function updateCountdown() {
         const now = new Date();
         const tomorrow = new Date();
-        tomorrow.setHours(24, 0, 0, 0); // Establecer a las 00:00 del día siguiente
-
+        tomorrow.setHours(24, 0, 0, 0);
         const diff = tomorrow - now;
-
         const hours = Math.floor(diff / (1000 * 60 * 60));
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-        // Formato 00:00:00
         const format = (num) => num.toString().padStart(2, '0');
-        
         document.getElementById('timer').innerText = `${format(hours)}:${format(minutes)}:${format(seconds)}`;
     }
-
     setInterval(updateCountdown, 1000);
-    updateCountdown(); // Ejecutar al cargar para evitar el retraso de 1s
+    updateCountdown();
 
-
-    // --- LÓGICA DE LA LADDER ---
     const rankOrder = { "CHALLENGER": 10, "GRANDMASTER": 9, "MASTER": 8, "DIAMOND": 7, "EMERALD": 6, "PLATINUM": 5, "GOLD": 4, "SILVER": 3, "BRONZE": 2, "IRON": 1, "UNRANKED": 0 };
     const divisionOrder = { "I": 4, "II": 3, "III": 2, "IV": 1 };
 
@@ -186,7 +179,6 @@
         try {
             const response = await fetch('ladder_data.json');
             const data = await response.json();
-
             data.sort((a, b) => {
                 if (rankOrder[a.tier] !== rankOrder[b.tier]) return rankOrder[b.tier] - rankOrder[a.tier];
                 const divA = divisionOrder[a.rank] || 0;
@@ -194,7 +186,6 @@
                 if (divA !== divB) return divB - divA;
                 return b.leaguePoints - a.leaguePoints;
             });
-
             const body = document.getElementById('ladder-body');
             body.innerHTML = data.map((user, index) => {
                 const tierLower = user.tier.toLowerCase();
@@ -202,7 +193,6 @@
                 const wr = total > 0 ? Math.round((user.wins / total) * 100) : 0;
                 const opggName = user.name.replace('#', '-');
                 const opggUrl = `https://www.op.gg/summoners/la2/${encodeURIComponent(opggName)}`;
-
                 return `
                     <tr class="ladder-row tier-${tierLower}">
                         <td style="color: var(--text-silver); font-weight: bold; width: 40px;">${index + 1}</td>
@@ -213,20 +203,13 @@
                             <span class="win">${user.wins}W</span> <span class="loss">${user.losses}L</span>
                             <div style="font-size: 0.75rem; color: ${wr >= 50 ? '#2ecc71' : '#e74c3c'}">${wr}% WR</div>
                         </td>
-                    </tr>
-                `;
+                    </tr>`;
             }).join('');
-
             document.getElementById('loading').classList.add('hidden');
             document.getElementById('ladder-table').classList.remove('hidden');
-        } catch (e) {
-            document.getElementById('loading').innerHTML = "⚠️ Error al cargar datos.";
-        }
+        } catch (e) { document.getElementById('loading').innerHTML = "⚠️ Error al cargar datos."; }
     }
     loadLadder();
 </script>
-
 </body>
 </html>
-
-
