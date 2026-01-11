@@ -34,9 +34,26 @@
             color: var(--text-gold);
             text-transform: uppercase;
             letter-spacing: 6px;
-            margin-bottom: 50px;
+            margin-bottom: 10px; /* Reducido para el contador */
             font-size: 1.8rem;
         }
+
+        /* ESTILO DEL CONTADOR */
+        #countdown-container {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+            color: var(--text-silver);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        #timer {
+            color: var(--text-gold);
+            font-weight: bold;
+            font-variant-numeric: tabular-nums; /* Evita que los números "salten" */
+        }
+
         .ladder {
             width: 100%;
             border-collapse: separate;
@@ -54,6 +71,7 @@
 
         .ladder-row {
             height: 70px;
+            background: var(--card-base);
         }
 
         .ladder-row td {
@@ -74,8 +92,7 @@
             border-bottom-right-radius: 6px; 
         }
 
-        /* Degradados unificados */
-        .ladder-row { background: var(--card-base); }
+        /* Degradados por elo */
         .tier-challenger { background: linear-gradient(90deg, rgba(244,196,125,0.2) 0%, var(--card-base) 60%) !important; }
         .tier-challenger td:first-child { border-left-color: #f4c47d; }
         .tier-grandmaster { background: linear-gradient(90deg, rgba(239,68,68,0.2) 0%, var(--card-base) 60%) !important; }
@@ -93,25 +110,19 @@
         .tier-silver { background: linear-gradient(90deg, rgba(160,155,140,0.15) 0%, var(--card-base) 60%) !important; }
         .tier-silver td:first-child { border-left-color: #a09b8c; }
 
-        /* Estilo del Enlace (Nombres en Blanco) */
         .opgg-link {
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
-            color: #ffffff !important; /* Fuerza el color blanco */
+            color: #ffffff !important;
             transition: color 0.2s ease;
         }
 
-        .opgg-link:hover {
-            color: var(--text-gold) !important; /* Cambia a dorado al pasar el mouse */
-            text-decoration: none;
-        }
-
+        .opgg-link:hover { color: var(--text-gold) !important; }
         .tier-label { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: #eee; }
         .pl-value { font-size: 1.2rem; font-weight: bold; color: #fff; }
         .win { color: var(--win-color); font-weight: bold; }
         .loss { color: var(--loss-color); }
-        
         #loading { text-align: center; padding: 50px; color: var(--text-gold); }
         .hidden { display: none; }
     </style>
@@ -120,7 +131,13 @@
 
 <div class="container">
     <h1>LA FOKIN LADDER</h1>
+    
+    <div id="countdown-container">
+        Próxima actualización en: <span id="timer">00:00:00</span>
+    </div>
+
     <div id="loading">Cargando...</div>
+
     <table class="ladder hidden" id="ladder-table">
         <thead>
             <tr>
@@ -136,6 +153,29 @@
 </div>
 
 <script>
+    // --- LÓGICA DEL CONTADOR ---
+    function updateCountdown() {
+        const now = new Date();
+        const tomorrow = new Date();
+        tomorrow.setHours(24, 0, 0, 0); // Establecer a las 00:00 del día siguiente
+
+        const diff = tomorrow - now;
+
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        // Formato 00:00:00
+        const format = (num) => num.toString().padStart(2, '0');
+        
+        document.getElementById('timer').innerText = `${format(hours)}:${format(minutes)}:${format(seconds)}`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // Ejecutar al cargar para evitar el retraso de 1s
+
+
+    // --- LÓGICA DE LA LADDER ---
     const rankOrder = { "CHALLENGER": 10, "GRANDMASTER": 9, "MASTER": 8, "DIAMOND": 7, "EMERALD": 6, "PLATINUM": 5, "GOLD": 4, "SILVER": 3, "BRONZE": 2, "IRON": 1, "UNRANKED": 0 };
     const divisionOrder = { "I": 4, "II": 3, "III": 2, "IV": 1 };
 
@@ -144,14 +184,11 @@
             const response = await fetch('ladder_data.json');
             const data = await response.json();
 
-            // Lógica de ordenamiento corregida (Tier > División > PL)
             data.sort((a, b) => {
                 if (rankOrder[a.tier] !== rankOrder[b.tier]) return rankOrder[b.tier] - rankOrder[a.tier];
-                
                 const divA = divisionOrder[a.rank] || 0;
                 const divB = divisionOrder[b.rank] || 0;
                 if (divA !== divB) return divB - divA;
-
                 return b.leaguePoints - a.leaguePoints;
             });
 
@@ -160,16 +197,13 @@
                 const tierLower = user.tier.toLowerCase();
                 const total = user.wins + user.losses;
                 const wr = total > 0 ? Math.round((user.wins / total) * 100) : 0;
-                
                 const opggName = user.name.replace('#', '-');
-                const opggUrl = `https://www.op.gg/summoners/las/${encodeURIComponent(opggName)}`;
+                const opggUrl = `https://www.op.gg/summoners/la2/${encodeURIComponent(opggName)}`;
 
                 return `
                     <tr class="ladder-row tier-${tierLower}">
                         <td style="color: var(--text-silver); font-weight: bold; width: 40px;">${index + 1}</td>
-                        <td style="width: 250px;">
-                            <a href="${opggUrl}" target="_blank" class="opgg-link">${user.name}</a>
-                        </td>
+                        <td style="width: 250px;"><a href="${opggUrl}" target="_blank" class="opgg-link">${user.name}</a></td>
                         <td><span class="tier-label">${user.tier} ${user.rank}</span></td>
                         <td><span class="pl-value">${user.leaguePoints}</span> <span style="font-size: 0.7rem; color: var(--text-silver);">PL</span></td>
                         <td style="text-align: right;">
@@ -183,7 +217,7 @@
             document.getElementById('loading').classList.add('hidden');
             document.getElementById('ladder-table').classList.remove('hidden');
         } catch (e) {
-            document.getElementById('loading').innerHTML = "⚠️ Error al cargar el JSON.";
+            document.getElementById('loading').innerHTML = "⚠️ Error al cargar datos.";
         }
     }
     loadLadder();
@@ -191,7 +225,3 @@
 
 </body>
 </html>
-
-
-
-
