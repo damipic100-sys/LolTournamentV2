@@ -16,6 +16,14 @@
     "losses": 5
   },
   {
+    "name": "Cork#crazy",
+    "tier": "EMERALD",
+    "rank": "IV",
+    "leaguePoints": 65,
+    "wins": 11,
+    "losses": 5
+  },
+  {
     "name": "Gwungle Account#ARG",
     "tier": "EMERALD",
     "rank": "IV",
@@ -46,14 +54,6 @@
     "leaguePoints": 40,
     "wins": 3,
     "losses": 3
-  },
-  {
-    "name": "Cork#crazy",
-    "tier": "EMERALD",
-    "rank": "IV",
-    "leaguePoints": 65,
-    "wins": 11,
-    "losses": 5
   },
   {
     "name": "we1rdcat#uwu",
