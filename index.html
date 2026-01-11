@@ -37,6 +37,20 @@
             margin-bottom: 50px;
             font-size: 1.8rem;
         }
+        #countdown-container {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+            color: var(--text-silver);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        #timer {
+            color: var(--text-gold);
+            font-weight: bold;
+            font-variant-numeric: tabular-nums; /* Evita que los números "salten" */
+        }
 
         .ladder {
             width: 100%;
@@ -137,6 +151,26 @@
 </div>
 
 <script>
+    // --- LÓGICA DEL CONTADOR ---
+    function updateCountdown() {
+        const now = new Date();
+        const tomorrow = new Date();
+        tomorrow.setHours(24, 0, 0, 0); // Establecer a las 00:00 del día siguiente
+
+        const diff = tomorrow - now;
+
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        // Formato 00:00:00
+        const format = (num) => num.toString().padStart(2, '0');
+        
+        document.getElementById('timer').innerText = `${format(hours)}:${format(minutes)}:${format(seconds)}`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // Ejecutar al cargar para evitar el retraso de 1s
     const rankOrder = { "CHALLENGER": 10, "GRANDMASTER": 9, "MASTER": 8, "DIAMOND": 7, "EMERALD": 6, "PLATINUM": 5, "GOLD": 4, "SILVER": 3, "BRONZE": 2, "IRON": 1, "UNRANKED": 0 };
     const divisionOrder = { "I": 4, "II": 3, "III": 2, "IV": 1 };
 
@@ -192,5 +226,6 @@
 
 </body>
 </html>
+
 
 
