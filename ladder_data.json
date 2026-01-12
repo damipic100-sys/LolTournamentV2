@@ -41,11 +41,11 @@
   },
   {
     "name": "Zeeky#1919",
-    "tier": "UNRANKED",
-    "rank": "0",
-    "leaguePoints": 0,
-    "wins": 0,
-    "losses": 0
+    "tier": "SILVER",
+    "rank": "IV",
+    "leaguePoints": 60,
+    "wins": 1,
+    "losses": 4
   },
   {
     "name": "Tobi Soabe#LAS",
@@ -59,7 +59,7 @@
     "name": "we1rdcat#uwu",
     "tier": "PLATINUM",
     "rank": "III",
-    "leaguePoints": 90,
+    "leaguePoints": 60,
     "wins": 0,
     "losses": 6
   },
