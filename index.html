@@ -161,7 +161,7 @@
     function updateCountdown() {
         const now = new Date();
         const tomorrow = new Date();
-        tomorrow.setHours(25, 0, 0, 0);
+        tomorrow.setHours(26, 0, 0, 0);
         const diff = tomorrow - now;
         const hours = Math.floor(diff / (1000 * 60 * 60));
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
@@ -213,6 +213,7 @@
 </script>
 </body>
 </html>
+
 
 
 
