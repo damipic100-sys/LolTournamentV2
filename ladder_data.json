@@ -59,9 +59,9 @@
     "name": "we1rdcat#uwu",
     "tier": "EMERALD",
     "rank": "III",
-    "leaguePoints": 67,
+    "leaguePoints": 57,
     "wins": 17,
-    "losses": 18
+    "losses": 19
   },
   {
     "name": "grande y grueso#7518",
@@ -91,9 +91,9 @@
     "name": "alejandro magno#HDS",
     "tier": "BRONZE",
     "rank": "I",
-    "leaguePoints": 55,
-    "wins": 5,
-    "losses": 7
+    "leaguePoints": 75,
+    "wins": 6,
+    "losses": 8
   },
   {
     "name": "MatiC3#CDE",
@@ -106,9 +106,9 @@
   {
     "name": "el extraño caso#er9",
     "tier": "SILVER",
-    "rank": "III",
-    "leaguePoints": 40,
-    "wins": 4,
+    "rank": "II",
+    "leaguePoints": 20,
+    "wins": 7,
     "losses": 8
   },
   {
@@ -131,9 +131,9 @@
     "name": "Zair#ZaZa",
     "tier": "EMERALD",
     "rank": "I",
-    "leaguePoints": 11,
+    "leaguePoints": 1,
     "wins": 13,
-    "losses": 13
+    "losses": 14
   },
   {
     "name": "Bizkochito#2000",
@@ -182,5 +182,13 @@
     "leaguePoints": 60,
     "wins": 12,
     "losses": 8
+  },
+  {
+    "name": "Carlos Bianchi#77777",
+    "tier": "PLATINUM",
+    "rank": "IV",
+    "leaguePoints": 0,
+    "wins": 21,
+    "losses": 26
   }
 ]
