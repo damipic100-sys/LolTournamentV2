@@ -66,9 +66,9 @@
   {
     "name": "grande y grueso#7518",
     "tier": "SILVER",
-    "rank": "II",
-    "leaguePoints": 70,
-    "wins": 5,
+    "rank": "I",
+    "leaguePoints": 0,
+    "wins": 6,
     "losses": 6
   },
   {
@@ -107,9 +107,9 @@
     "name": "el extraño caso#er9",
     "tier": "SILVER",
     "rank": "III",
-    "leaguePoints": 20,
-    "wins": 3,
-    "losses": 5
+    "leaguePoints": 40,
+    "wins": 4,
+    "losses": 8
   },
   {
     "name": "Pachu#777",
@@ -171,8 +171,8 @@
     "name": "abrilcitauwu#7113",
     "tier": "SILVER",
     "rank": "IV",
-    "leaguePoints": 5,
-    "wins": 6,
+    "leaguePoints": 35,
+    "wins": 7,
     "losses": 5
   }
 ]
