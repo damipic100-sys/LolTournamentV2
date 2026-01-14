@@ -10,17 +10,17 @@
   {
     "name": "Trastornado#FKC",
     "tier": "EMERALD",
-    "rank": "II",
-    "leaguePoints": 76,
-    "wins": 29,
+    "rank": "I",
+    "leaguePoints": 2,
+    "wins": 30,
     "losses": 17
   },
   {
     "name": "pør casi un G6#FKC",
     "tier": "EMERALD",
     "rank": "II",
-    "leaguePoints": 47,
-    "wins": 22,
+    "leaguePoints": 72,
+    "wins": 23,
     "losses": 19
   },
   {
@@ -142,5 +142,53 @@
     "leaguePoints": 64,
     "wins": 6,
     "losses": 9
+  },
+  {
+    "name": "MatiC3#CDE",
+    "tier": "UNRANKED",
+    "rank": null,
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Pachu#777",
+    "tier": "UNRANKED",
+    "rank": null,
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Samurai Sword#LAS",
+    "tier": "UNRANKED",
+    "rank": null,
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Bizkochito#2000",
+    "tier": "UNRANKED",
+    "rank": null,
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Chal0#LAS",
+    "tier": "UNRANKED",
+    "rank": null,
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Rapisher#LAS",
+    "tier": "UNRANKED",
+    "rank": null,
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
   }
 ]
