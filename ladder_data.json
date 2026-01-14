@@ -90,10 +90,10 @@
   {
     "name": "alejandro magno#HDS",
     "tier": "BRONZE",
-    "rank": "II",
-    "leaguePoints": 90,
-    "wins": 2,
-    "losses": 4
+    "rank": "I",
+    "leaguePoints": 55,
+    "wins": 5,
+    "losses": 7
   },
   {
     "name": "MatiC3#CDE",
@@ -140,8 +140,8 @@
     "tier": "UNRANKED",
     "rank": "0",
     "leaguePoints": 0,
-    "wins": 0,
-    "losses": 0
+    "wins": 1,
+    "losses": 2
   },
   {
     "name": "Chal0#LAS",
@@ -169,10 +169,10 @@
   },
   {
     "name": "abrilcitauwu#7113",
-    "tier": "BRONZE",
-    "rank": "I",
-    "leaguePoints": 55,
-    "wins": 4,
-    "losses": 4
+    "tier": "SILVER",
+    "rank": "IV",
+    "leaguePoints": 5,
+    "wins": 6,
+    "losses": 5
   }
 ]
