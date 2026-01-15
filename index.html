@@ -178,7 +178,7 @@ function updateCountdown() {
     timerElement.innerText = `${format(minutes)}:${format(seconds)}`;
 
     // Efecto de parpadeo si faltan menos de 10 segundos
-    if (totalSeconds <= 10) {
+    if (totalSeconds <= 2760) {
         timerElement.classList.add('urgent');
     } else {
         timerElement.classList.remove('urgent');
@@ -228,6 +228,7 @@ function updateCountdown() {
 </script>
 </body>
 </html>
+
 
 
 
