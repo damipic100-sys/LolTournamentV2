@@ -1,26 +1,36 @@
 @echo off
+:: Asegura que el script se ejecute en la carpeta donde está guardado
 cd /d "%~dp0"
-title Actualizador Automatico
+title Actualizador Ladder - LolTournamentV2
 
-echo [1/4] Actualizando JSON...
-node update_ladder.js
+echo ============================================
+echo [1/4] Ejecutando update.js con Node.js...
+echo ============================================
+node update.js
 
 echo.
-echo [2/4] Sincronizando (Pull)...
+echo ============================================
+echo [2/4] Sincronizando con GitHub (Pull)...
+echo ============================================
+:: Baja cambios de la nube para evitar errores de "rejected"
 git pull origin main --rebase
 
 echo.
 echo [3/4] Preparando archivos...
-:: Usar "git add ." obliga a Git a incluir TODO lo modificado
+echo ============================================
+:: Agregamos todos los cambios (JSON, HTML, CSS)
 git add .
-
-:: Esto evita que el script se detenga si no hay cambios reales
 git commit -m "Auto-update: %date% %time%"
 
 echo.
-echo [4/4] Subiendo a GitHub...
+echo ============================================
+echo [4/4] Subiendo datos a la web...
+echo ============================================
 git push origin main
 
 echo.
-echo === PROCESO FINALIZADO ===
+echo ============================================
+echo      PROCESO COMPLETADO EXITOSAMENTE
+echo ============================================
+:: Espera 5 segundos y se cierra solo
 timeout /t 5
