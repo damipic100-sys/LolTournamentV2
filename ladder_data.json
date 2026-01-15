@@ -1,1 +1,210 @@
-[]
+[
+  {
+    "name": "Zair#Zaza",
+    "tier": "EMERALD",
+    "rank": "I",
+    "leaguePoints": 36,
+    "wins": 15,
+    "losses": 17
+  },
+  {
+    "name": "Trastornado#FKC",
+    "tier": "EMERALD",
+    "rank": "I",
+    "leaguePoints": 84,
+    "wins": 35,
+    "losses": 20
+  },
+  {
+    "name": "pør casi un G6#FKC",
+    "tier": "EMERALD",
+    "rank": "I",
+    "leaguePoints": 87,
+    "wins": 29,
+    "losses": 21
+  },
+  {
+    "name": "Gwungle Account#ARG",
+    "tier": "EMERALD",
+    "rank": "II",
+    "leaguePoints": 74,
+    "wins": 24,
+    "losses": 21
+  },
+  {
+    "name": "we1rdcat#uwu",
+    "tier": "EMERALD",
+    "rank": "III",
+    "leaguePoints": 92,
+    "wins": 20,
+    "losses": 24
+  },
+  {
+    "name": "FernecitoConCoca#ARG",
+    "tier": "EMERALD",
+    "rank": "IV",
+    "leaguePoints": 20,
+    "wins": 8,
+    "losses": 14
+  },
+  {
+    "name": "Tobi Soabe#LAS",
+    "tier": "PLATINUM",
+    "rank": "III",
+    "leaguePoints": 16,
+    "wins": 6,
+    "losses": 5
+  },
+  {
+    "name": "Lushoto#uwu",
+    "tier": "PLATINUM",
+    "rank": "IV",
+    "leaguePoints": 22,
+    "wins": 16,
+    "losses": 11
+  },
+  {
+    "name": "Carlos Bianchi#77777",
+    "tier": "PLATINUM",
+    "rank": "IV",
+    "leaguePoints": 41,
+    "wins": 23,
+    "losses": 26
+  },
+  {
+    "name": "Arturo Illia#ARG",
+    "tier": "GOLD",
+    "rank": "I",
+    "leaguePoints": 95,
+    "wins": 26,
+    "losses": 17
+  },
+  {
+    "name": "GodTDJ#IAN",
+    "tier": "GOLD",
+    "rank": "II",
+    "leaguePoints": 60,
+    "wins": 12,
+    "losses": 8
+  },
+  {
+    "name": "Aśoka Vardhana#HDS",
+    "tier": "SILVER",
+    "rank": "I",
+    "leaguePoints": 16,
+    "wins": 8,
+    "losses": 10
+  },
+  {
+    "name": "grande y grueso#7518",
+    "tier": "GOLD",
+    "rank": "IV",
+    "leaguePoints": 11,
+    "wins": 10,
+    "losses": 7
+  },
+  {
+    "name": "ZeeKy#1919",
+    "tier": "SILVER",
+    "rank": "III",
+    "leaguePoints": 93,
+    "wins": 13,
+    "losses": 23
+  },
+  {
+    "name": "el extraño caso#er9",
+    "tier": "SILVER",
+    "rank": "II",
+    "leaguePoints": 2,
+    "wins": 8,
+    "losses": 11
+  },
+  {
+    "name": "Gonzaloo0407#LAS",
+    "tier": "SILVER",
+    "rank": "II",
+    "leaguePoints": 70,
+    "wins": 8,
+    "losses": 5
+  },
+  {
+    "name": "abrilcitauwu#7113",
+    "tier": "SILVER",
+    "rank": "III",
+    "leaguePoints": 15,
+    "wins": 10,
+    "losses": 6
+  },
+  {
+    "name": "alejandro magno#HDS",
+    "tier": "BRONZE",
+    "rank": "I",
+    "leaguePoints": 82,
+    "wins": 7,
+    "losses": 10
+  },
+  {
+    "name": "MatiC3#CDE",
+    "tier": "UNRANKED",
+    "rank": null,
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Pachu#777",
+    "tier": "UNRANKED",
+    "rank": null,
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Samurai Sword#LAS",
+    "tier": "UNRANKED",
+    "rank": null,
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Bizkochito#2000",
+    "tier": "UNRANKED",
+    "rank": null,
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Chal0#LAS",
+    "tier": "UNRANKED",
+    "rank": null,
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Rapisher#LAS",
+    "tier": "UNRANKED",
+    "rank": null,
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Fl1cka#G2G2",
+    "tier": "UNRANKED",
+    "rank": null,
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Mïlls#DHW",
+    "tier": "UNRANKED",
+    "rank": null,
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  }
+]
