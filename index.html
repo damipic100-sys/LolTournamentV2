@@ -113,7 +113,7 @@
         .tier-gold td:first-child { border-left-color: #d4af37; }
         .tier-silver { background: linear-gradient(90deg, rgba(160,155,140,0.15) 0%, var(--card-base) 60%) !important; }
         .tier-silver td:first-child { border-left-color: #a09b8c; }
-
+		.tier-unranked { background: #1a1a1a; border-left: 4px solid #444; opacity: 0.8; }	
         .opgg-link {
             text-decoration: none;
             font-weight: bold;
@@ -127,8 +127,19 @@
         .pl-value { font-size: 1.2rem; font-weight: bold; color: #fff; }
         .win { color: var(--win-color); font-weight: bold; }
         .loss { color: var(--loss-color); }
-        #loading { text-align: center; padding: 50px; color: var(--text-gold); }
+			#loading { text-align: center; padding: 50px; color: var(--text-gold); }
         .hidden { display: none; }
+		/* Animación de parpadeo */
+		@keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 0.3; }
+			100% { opacity: 1; }
+		}	
+
+		.urgent {
+		color: #ff4d4d !important; /* Rojo vibrante cuando queda poco tiempo */
+		animation: blink 0.8s infinite;
+}
     </style>
 </head>
 <body>
@@ -178,7 +189,7 @@ function updateCountdown() {
     timerElement.innerText = `${format(minutes)}:${format(seconds)}`;
 
     // Efecto de parpadeo si faltan menos de 10 segundos
-    if (totalSeconds <= 2760) {
+    if (totalSeconds <= 10) {
         timerElement.classList.add('urgent');
     } else {
         timerElement.classList.remove('urgent');
@@ -228,7 +239,6 @@ function updateCountdown() {
 </script>
 </body>
 </html>
-
 
 
 
