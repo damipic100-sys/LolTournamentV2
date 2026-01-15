@@ -10,10 +10,7 @@ echo.
 echo ============================================
 echo [2/4] Sincronizando con GitHub (Pull)...
 echo ============================================
-:: Baja cambios de la nube para evitar errores de "rejected"
-git pull origin main --rebase
 
-echo.
 echo [3/4] Preparando archivos...
 echo ============================================
 :: Agregamos todos los cambios (JSON, HTML, CSS)
