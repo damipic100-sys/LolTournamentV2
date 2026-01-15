@@ -1,8 +1,6 @@
 @echo off
 :: Asegura que el script se ejecute en la carpeta donde está guardado
 cd /d "%~dp0"
-title Actualizador Ladder - LolTournamentV2
-
 echo ============================================
 echo [1/4] Ejecutando update.js con Node.js...
 echo ============================================
