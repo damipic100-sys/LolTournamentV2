@@ -160,24 +160,29 @@
 <script>
 function updateCountdown() {
     const now = new Date();
-    
-    // Creamos una fecha para la próxima hora exacta
     const nextUpdate = new Date();
     nextUpdate.setHours(now.getHours() + 1, 0, 0, 0); 
 
     const diff = nextUpdate - now;
 
-    // Calculamos minutos y segundos (las horas siempre serán 00 en este caso)
-    const hours = Math.floor(diff / (1000 * 60 * 60));
+    // Calculamos solo minutos y segundos
+    const totalSeconds = Math.floor(diff / 1000);
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-    // Formato 00:00:00
     const format = (num) => num.toString().padStart(2, '0');
     
-    // Si quieres que solo muestre MM:SS (ya que siempre es menos de 1 hora)
-    // puedes usar: `${format(minutes)}:${format(seconds)}`
-    document.getElementById('timer').innerText = `${format(hours)}:${format(minutes)}:${format(seconds)}`;
+    const timerElement = document.getElementById('timer');
+    
+    // Mostramos solo MM:SS
+    timerElement.innerText = `${format(minutes)}:${format(seconds)}`;
+
+    // Efecto de parpadeo si faltan menos de 10 segundos
+    if (totalSeconds <= 10) {
+        timerElement.classList.add('urgent');
+    } else {
+        timerElement.classList.remove('urgent');
+    }
 }
     setInterval(updateCountdown, 1000);
     updateCountdown();
