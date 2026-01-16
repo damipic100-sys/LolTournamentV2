@@ -1,6 +1,46 @@
 [
   {
-    "name": "undefined#undefined",
+    "name": "Zair#Zaza",
+    "tier": "DIAMOND",
+    "rank": "III",
+    "leaguePoints": 35,
+    "wins": 24,
+    "losses": 24
+  },
+  {
+    "name": "Trastornado#FKC",
+    "tier": "DIAMOND",
+    "rank": "IV",
+    "leaguePoints": 31,
+    "wins": 39,
+    "losses": 23
+  },
+  {
+    "name": "pør casi un G6#FKC",
+    "tier": "DIAMOND",
+    "rank": "IV",
+    "leaguePoints": 19,
+    "wins": 32,
+    "losses": 23
+  },
+  {
+    "name": "Gwungle Account#ARG",
+    "tier": "EMERALD",
+    "rank": "II",
+    "leaguePoints": 97,
+    "wins": 29,
+    "losses": 27
+  },
+  {
+    "name": "we1rdcat#uwu",
+    "tier": "EMERALD",
+    "rank": "II",
+    "leaguePoints": 43,
+    "wins": 23,
+    "losses": 26
+  },
+  {
+    "name": "FernecitoConCoca#ARG",
     "tier": "EMERALD",
     "rank": "IV",
     "leaguePoints": 40,
@@ -8,7 +48,7 @@
     "losses": 15
   },
   {
-    "name": "undefined#undefined",
+    "name": "Tobi Soabe#LAS",
     "tier": "PLATINUM",
     "rank": "III",
     "leaguePoints": 16,
@@ -16,7 +56,7 @@
     "losses": 5
   },
   {
-    "name": "undefined#undefined",
+    "name": "Lushoto#uwu",
     "tier": "PLATINUM",
     "rank": "IV",
     "leaguePoints": 2,
@@ -24,7 +64,7 @@
     "losses": 13
   },
   {
-    "name": "undefined#undefined",
+    "name": "Carlos Bianchi#77777",
     "tier": "PLATINUM",
     "rank": "IV",
     "leaguePoints": 47,
@@ -32,7 +72,7 @@
     "losses": 29
   },
   {
-    "name": "undefined#undefined",
+    "name": "Arturo Illia#ARG",
     "tier": "PLATINUM",
     "rank": "IV",
     "leaguePoints": 23,
