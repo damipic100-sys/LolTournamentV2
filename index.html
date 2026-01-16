@@ -149,7 +149,7 @@
     
     <div id="info-container">
         <div>Próxima actualización en: <span id="timer">00:00:00</span></div>
-        <div>Máximo de partidas hasta la fecha: <span class="gold-number">64</span></div>
+        <div>Máximo de partidas hasta la fecha: <span class="gold-number">72</span></div>
     </div>
 
     <div id="loading">Cargando...</div>
@@ -189,7 +189,7 @@ function updateCountdown() {
     timerElement.innerText = `${format(minutes)}:${format(seconds)}`;
 
     // Efecto de parpadeo si faltan menos de 10 segundos
-    if (totalSeconds <= 30) {
+    if (totalSeconds <= 50) {
         timerElement.classList.add('urgent');
     } else {
         timerElement.classList.remove('urgent');
