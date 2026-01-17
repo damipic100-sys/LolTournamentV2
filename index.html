@@ -188,12 +188,6 @@ function updateCountdown() {
     // Mostramos solo MM:SS
     timerElement.innerText = `${format(minutes)}:${format(seconds)}`;
 
-    // Efecto de parpadeo si faltan menos de 10 segundos
-    if (totalSeconds <= 58) {
-        timerElement.classList.add('urgent');
-    } else {
-        timerElement.classList.remove('urgent');
-    }
 
     if (totalSeconds <= 0) {
         timerElement.innerText = "ACTUALIZANDO...";
@@ -206,7 +200,7 @@ function updateCountdown() {
     } else {
         timerElement.innerText = `${format(minutes)}:${format(seconds)}`;
         
-        if (totalSeconds <= 30) {
+        if (totalSeconds <= 58) {
             timerElement.classList.add('urgent');
         } else {
             timerElement.classList.remove('urgent');
