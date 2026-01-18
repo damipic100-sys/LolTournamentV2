@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import fs from "fs";
 
-const API_KEY = "RGAPI-5cdbf4bf-551c-4376-8857-2cd4db0694f8";
+const API_KEY = "RGAPI-348fa980-6209-4ef7-869b-d7c2b1275866";
 const REGION = "americas"; // account-v1
 const PLATFORM = "la2";    // la2 / la1 / br1, etc
 
@@ -31,7 +31,8 @@ const PUUIDS = [
   "jPzRi_IXrh335ahPJQbsZwqqMtHq3jrHehcLh5vm3iqtF9_MD0GsnajpJmSooz0pIDf5fWkg-qVj2g",
   "L02y3eQqLk-SwAyc28i8tF-9UB4yFyOAvstpzMO75zLywCOdIFK3RCeDhv8uOQDKRKRMn2hv4WC7Ug",
   "S1gI6coHKWEJu04rAV5AtIHnWAfwSXxD05FfukQcYy0y9a5U0Vy5NvPsdzD769NIabFkPUopHm7Q2A",
-  "g7z3z62-28wFlBN6-tqDBddPqhUYgabuk6wvfqfOINGI_i0iOqB4P-gyH04Q3XtfeS7ms-j5Ek8G0A"
+  "g7z3z62-28wFlBN6-tqDBddPqhUYgabuk6wvfqfOINGI_i0iOqB4P-gyH04Q3XtfeS7ms-j5Ek8G0A",
+  "J5x_g_Tb2yUDcmEw5-U1CesfldQlz4gKwifbJpqOUHKjlO-qEM9gOYeFwjUsR3m26k-hKOT_-4CPkw"
 ];
 
 const headers = {
