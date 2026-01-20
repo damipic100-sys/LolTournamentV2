@@ -89,10 +89,10 @@
   },
   {
     "name": "Aśoka Vardhana#HDS",
-    "tier": "SILVER",
-    "rank": "I",
-    "leaguePoints": 75,
-    "wins": 12,
+    "tier": "GOLD",
+    "rank": "IV",
+    "leaguePoints": 5,
+    "wins": 13,
     "losses": 15
   },
   {
@@ -107,9 +107,9 @@
     "name": "ZeeKy#1919",
     "tier": "GOLD",
     "rank": "IV",
-    "leaguePoints": 73,
+    "leaguePoints": 57,
     "wins": 28,
-    "losses": 29
+    "losses": 30
   },
   {
     "name": "el extraño caso#er9",
@@ -139,8 +139,8 @@
     "name": "alejandro magno#HDS",
     "tier": "SILVER",
     "rank": "III",
-    "leaguePoints": 0,
-    "wins": 13,
+    "leaguePoints": 24,
+    "wins": 14,
     "losses": 15
   },
   {
