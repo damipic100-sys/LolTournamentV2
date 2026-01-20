@@ -3,8 +3,8 @@
     "name": "Zair#Zaza",
     "tier": "DIAMOND",
     "rank": "I",
-    "leaguePoints": 31,
-    "wins": 45,
+    "leaguePoints": 52,
+    "wins": 46,
     "losses": 40
   },
   {
@@ -99,24 +99,24 @@
     "name": "grande y grueso#7518",
     "tier": "GOLD",
     "rank": "II",
-    "leaguePoints": 58,
+    "leaguePoints": 44,
     "wins": 22,
-    "losses": 17
+    "losses": 18
   },
   {
     "name": "ZeeKy#1919",
     "tier": "GOLD",
     "rank": "IV",
-    "leaguePoints": 57,
-    "wins": 28,
+    "leaguePoints": 81,
+    "wins": 29,
     "losses": 30
   },
   {
     "name": "el extraño caso#er9",
     "tier": "GOLD",
     "rank": "IV",
-    "leaguePoints": 69,
-    "wins": 21,
+    "leaguePoints": 96,
+    "wins": 22,
     "losses": 20
   },
   {
@@ -130,10 +130,10 @@
   {
     "name": "abrilcitauwu#7113",
     "tier": "SILVER",
-    "rank": "II",
-    "leaguePoints": 0,
+    "rank": "III",
+    "leaguePoints": 86,
     "wins": 17,
-    "losses": 16
+    "losses": 17
   },
   {
     "name": "alejandro magno#HDS",
@@ -209,10 +209,10 @@
   },
   {
     "name": "OTK JuanCarlos#OTK",
-    "tier": "UNRANKED",
-    "rank": null,
-    "leaguePoints": 0,
-    "wins": 0,
-    "losses": 0
+    "tier": "GOLD",
+    "rank": "IV",
+    "leaguePoints": 97,
+    "wins": 4,
+    "losses": 1
   }
 ]
