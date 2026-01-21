@@ -4,15 +4,15 @@
     "tier": "DIAMOND",
     "rank": "II",
     "leaguePoints": 99,
-    "wins": 49,
-    "losses": 46
+    "wins": 50,
+    "losses": 47
   },
   {
     "name": "Trastornado#FKC",
     "tier": "DIAMOND",
-    "rank": "II",
-    "leaguePoints": 85,
-    "wins": 65,
+    "rank": "I",
+    "leaguePoints": 6,
+    "wins": 66,
     "losses": 42
   },
   {
@@ -75,9 +75,9 @@
     "name": "Arturo Illia#ARG",
     "tier": "PLATINUM",
     "rank": "IV",
-    "leaguePoints": 80,
+    "leaguePoints": 63,
     "wins": 37,
-    "losses": 31
+    "losses": 32
   },
   {
     "name": "GodTDJ#IAN",
@@ -99,16 +99,16 @@
     "name": "grande y grueso#7518",
     "tier": "GOLD",
     "rank": "II",
-    "leaguePoints": 82,
+    "leaguePoints": 68,
     "wins": 24,
-    "losses": 19
+    "losses": 20
   },
   {
     "name": "ZeeKy#1919",
     "tier": "GOLD",
     "rank": "III",
-    "leaguePoints": 29,
-    "wins": 31,
+    "leaguePoints": 53,
+    "wins": 32,
     "losses": 30
   },
   {
@@ -130,10 +130,10 @@
   {
     "name": "abrilcitauwu#7113",
     "tier": "SILVER",
-    "rank": "II",
-    "leaguePoints": 11,
+    "rank": "III",
+    "leaguePoints": 96,
     "wins": 18,
-    "losses": 17
+    "losses": 18
   },
   {
     "name": "alejandro magno#HDS",
