@@ -1,5 +1,141 @@
 [
   {
+    "name": "Zair#Zaza",
+    "tier": "MASTER",
+    "rank": "I",
+    "leaguePoints": 0,
+    "wins": 56,
+    "losses": 49
+  },
+  {
+    "name": "Trastornado#FKC",
+    "tier": "MASTER",
+    "rank": "I",
+    "leaguePoints": 1,
+    "wins": 78,
+    "losses": 50
+  },
+  {
+    "name": "pør casi un G6#FKC",
+    "tier": "DIAMOND",
+    "rank": "I",
+    "leaguePoints": 71,
+    "wins": 69,
+    "losses": 51
+  },
+  {
+    "name": "Gwungle Account#ARG",
+    "tier": "DIAMOND",
+    "rank": "III",
+    "leaguePoints": 36,
+    "wins": 55,
+    "losses": 45
+  },
+  {
+    "name": "we1rdcat#uwu",
+    "tier": "EMERALD",
+    "rank": "I",
+    "leaguePoints": 4,
+    "wins": 35,
+    "losses": 39
+  },
+  {
+    "name": "FernecitoConCoca#ARG",
+    "tier": "EMERALD",
+    "rank": "I",
+    "leaguePoints": 53,
+    "wins": 20,
+    "losses": 18
+  },
+  {
+    "name": "Tobi Soabe#LAS",
+    "tier": "PLATINUM",
+    "rank": "III",
+    "leaguePoints": 16,
+    "wins": 6,
+    "losses": 5
+  },
+  {
+    "name": "Lushoto#uwu",
+    "tier": "PLATINUM",
+    "rank": "IV",
+    "leaguePoints": 52,
+    "wins": 20,
+    "losses": 19
+  },
+  {
+    "name": "Yuka Okkotsu#77777",
+    "tier": "PLATINUM",
+    "rank": "II",
+    "leaguePoints": 45,
+    "wins": 44,
+    "losses": 39
+  },
+  {
+    "name": "Arturo Illia#ARG",
+    "tier": "PLATINUM",
+    "rank": "III",
+    "leaguePoints": 36,
+    "wins": 44,
+    "losses": 37
+  },
+  {
+    "name": "GodTDJ#IAN",
+    "tier": "PLATINUM",
+    "rank": "IV",
+    "leaguePoints": 24,
+    "wins": 22,
+    "losses": 18
+  },
+  {
+    "name": "Aśoka Vardhana#HDS",
+    "tier": "GOLD",
+    "rank": "IV",
+    "leaguePoints": 55,
+    "wins": 16,
+    "losses": 19
+  },
+  {
+    "name": "grande y grueso#7518",
+    "tier": "GOLD",
+    "rank": "I",
+    "leaguePoints": 21,
+    "wins": 28,
+    "losses": 23
+  },
+  {
+    "name": "ZeeKy#1919",
+    "tier": "GOLD",
+    "rank": "III",
+    "leaguePoints": 28,
+    "wins": 33,
+    "losses": 33
+  },
+  {
+    "name": "el extraño caso#er9",
+    "tier": "GOLD",
+    "rank": "II",
+    "leaguePoints": 32,
+    "wins": 30,
+    "losses": 24
+  },
+  {
+    "name": "Gonzaloo0407#LAS",
+    "tier": "SILVER",
+    "rank": "I",
+    "leaguePoints": 20,
+    "wins": 10,
+    "losses": 6
+  },
+  {
+    "name": "abrilcitauwu#7113",
+    "tier": "SILVER",
+    "rank": "II",
+    "leaguePoints": 50,
+    "wins": 22,
+    "losses": 21
+  },
+  {
     "name": "alejandro magno#HDS",
     "tier": "SILVER",
     "rank": "III",
