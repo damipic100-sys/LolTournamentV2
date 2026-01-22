@@ -3,9 +3,9 @@
     "name": "Zair#Zaza",
     "tier": "MASTER",
     "rank": "I",
-    "leaguePoints": 19,
+    "leaguePoints": 0,
     "wins": 56,
-    "losses": 47
+    "losses": 48
   },
   {
     "name": "Trastornado#FKC",
@@ -74,17 +74,17 @@
   {
     "name": "Arturo Illia#ARG",
     "tier": "PLATINUM",
-    "rank": "IV",
-    "leaguePoints": 86,
-    "wins": 41,
+    "rank": "III",
+    "leaguePoints": 9,
+    "wins": 42,
     "losses": 36
   },
   {
     "name": "GodTDJ#IAN",
     "tier": "GOLD",
     "rank": "I",
-    "leaguePoints": 32,
-    "wins": 17,
+    "leaguePoints": 59,
+    "wins": 18,
     "losses": 13
   },
   {
@@ -138,10 +138,10 @@
   {
     "name": "alejandro magno#HDS",
     "tier": "SILVER",
-    "rank": "III",
-    "leaguePoints": 23,
+    "rank": "IV",
+    "leaguePoints": 90,
     "wins": 15,
-    "losses": 17
+    "losses": 19
   },
   {
     "name": "MatiC3#CDE",
