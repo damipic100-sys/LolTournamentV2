@@ -152,7 +152,7 @@
     <div id="info-container">
         <div>Próxima actualización en: <span id="timer">00:00</span></div>
         <div>Máximo de partidas hasta la fecha: <span class="gold-number">128</span></div>
-		<div>Tiempo hasta la finalizacion del torneo: <span id="tournament-timer"></span></div>
+		<div>Tiempo hasta la finalizacion del torneo: <span id="tournament-timer">00 D 00:00:00</span></div>
     </div>
 
     <div id="loading">Cargando...</div>
@@ -228,7 +228,7 @@ function updateCountdown() {
     const format = (num) => num.toString().padStart(2, '0');
 
     document.getElementById('tournament-timer').innerText = 
-        `${days}D ${format(hours)}:${format(minutes)}:${format(seconds)}`;
+        `${days} D ${format(hours)}:${format(minutes)}:${format(seconds)}`;
 	}
 
 	setInterval(() => {
