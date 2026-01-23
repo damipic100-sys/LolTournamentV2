@@ -261,10 +261,10 @@ function updateCountdown() {
                         <td style="color: var(--text-silver); font-weight: bold; width: 40px;">${index + 1}</td>
                         <td style="width: 250px;"><a href="${opggUrl}" target="_blank" class="opgg-link">${user.name}</a></td>
                         <td><span class="tier-label">${user.tier} ${user.rank}</span></td>
-                        <td><span class="pl-value">${user.leaguePoints}</span> <span style="font-size: 0.7rem; color: var(--text-silver);">PL</span></td>
+                        <td><span class="pl-value">${user.leaguePoints}</span> <span style="font-size: 0.7rem; color: var(--text-silver);">LP</span></td>
                         <td style="text-align: right;">
                             <span class="win">${user.wins}W</span> <span class="loss">${user.losses}L</span>
-                            <div style="font-size: 0.75rem; color: ${wr >= 50 ? '#2ecc71' : '#e74c3c'}">${wr}% WR</div>
+                            <div style="font-size: 0.8rem; color: ${wr >= 50 ? '#2ecc71' : '#e74c3c'}">${wr}% WR</div>
                         </td>
                     </tr>`;
             }).join('');
