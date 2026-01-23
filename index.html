@@ -154,6 +154,8 @@
     <div id="info-container">
         <div>Próxima actualización en: <span id="timer">00:00:00</span></div>
         <div>Máximo de partidas hasta la fecha: <span class="gold-number">128</span></div>
+		<div class="stats-container"> <p>Tiempo hasta la finalización del torneo: <span id="tournament-timer"></span></p>
+</div>
     </div>
 
     <div id="loading">Cargando...</div>
@@ -211,12 +213,37 @@ function updateCountdown() {
         }
     }
 }
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
 
     const rankOrder = { "CHALLENGER": 10, "GRANDMASTER": 9, "MASTER": 8, "DIAMOND": 7, "EMERALD": 6, "PLATINUM": 5, "GOLD": 4, "SILVER": 3, "BRONZE": 2, "IRON": 1, "UNRANKED": 0 };
     const divisionOrder = { "I": 4, "II": 3, "III": 2, "IV": 1 };
+	
+	function updateTournamentCountdown() {
+    const targetDate = new Date("April 29, 2026 00:00:00").getTime(); // Ajusta el año si es 2025
+    const now = new Date().getTime();
+    const diff = targetDate - now;
 
+    if (diff <= 0) {
+        document.getElementById('tournament-timer').innerText = "¡SE ACABO AL CARAJO!";
+        return;
+    }
+
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    const format = (num) => num.toString().padStart(2, '0');
+
+    document.getElementById('tournament-timer').innerText = 
+        `${days}D ${format(hours)}H ${format(minutes)}M ${format(seconds)}S`;
+}
+
+
+	setInterval(() => {
+		updateCountdown();           
+		updateTournamentCountdown(); 
+	}, 1000);
     async function loadLadder() {
         try {
             const response = await fetch('ladder_data.json');
