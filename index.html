@@ -256,18 +256,20 @@ function updateCountdown() {
                 const wr = total > 0 ? Math.round((user.wins / total) * 100) : 0;
                 const opggName = user.name.replace('#', '-');
                 const opggUrl = `https://www.op.gg/summoners/las/${encodeURIComponent(opggName)}`;
-                return `
-                    <tr class="ladder-row tier-${tierLower}">
-                        <td style="color: var(--text-silver); font-weight: bold; width: 40px;">${index + 1}</td>
-                        <td style="width: 250px;"><a href="${opggUrl}" target="_blank" class="opgg-link">${user.name}</a></td>
-                        <td><span class="tier-label">${user.tier} ${user.rank}</span></td>
-                        <td><span class="pl-value">${user.leaguePoints}</span> <span style="font-size: 0.7rem; color: var(--text-silver);">PL</span></td>
-                        <td style="text-align: right;">
-                            <span class="win">${user.wins}W</span> <span class="loss">${user.losses}L</span>
-                            <div style="font-size: 0.75rem; color: ${wr >= 50 ? '#2ecc71' : '#e74c3c'}">${wr}% WR</div>
-                        </td>
-                    </tr>`;
-            }).join('');
+				const highTiers = ['MASTER', 'GRANDMASTER', 'CHALLENGER'];
+
+				return `
+					<tr class="ladder-row tier-${tierLower}">
+						<td style="color: var(--text-silver); font-weight: bold; width: 40px;">${index + 1}</td>
+						<td style="width: 250px;"><a href="${opggUrl}" target="_blank" class="opgg-link">${user.name}</a></td>
+						<td><span class="tier-label">${user.tier} ${displayRank}</span></td>
+						<td><span class="pl-value">${user.leaguePoints}</span> <span style="font-size: 0.7rem; color: var(--text-silver);">PL</span></td>
+						<td style="text-align: right;">
+							<span class="win">${user.wins}W</span> <span class="loss">${user.losses}L</span>
+							<div style="font-size: 0.75rem; color: ${wr >= 50 ? '#2ecc71' : '#e74c3c'}">${wr}% WR</div>
+						</td>
+					</tr>`;
+			}).join('');
             document.getElementById('loading').classList.add('hidden');
             document.getElementById('ladder-table').classList.remove('hidden');
         } catch (e) { document.getElementById('loading').innerHTML = "⚠️ Error al cargar datos."; }
