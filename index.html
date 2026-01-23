@@ -179,7 +179,6 @@ function updateCountdown() {
 
     const diff = nextUpdate - now;
 
-    // Calculamos solo minutos y segundos
     const totalSeconds = Math.floor(diff / 1000);
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
@@ -188,7 +187,7 @@ function updateCountdown() {
     
     const timerElement = document.getElementById('timer');
     
-    // Mostramos solo MM:SS
+
     timerElement.innerText = `${format(minutes)}:${format(seconds)}`;
 
 
@@ -211,7 +210,7 @@ function updateCountdown() {
     }
 }
 	function updateTournamentCountdown() {
-    const targetDate = new Date("April 29, 2024 00:00:00").getTime(); // Ajusta el año si es 2025
+    const targetDate = new Date("April 29, 2026 00:00:00").getTime(); // Ajusta el año si es 2025
     const now = new Date().getTime();
     const diff = targetDate - now;
 
@@ -220,7 +219,7 @@ function updateCountdown() {
         return;
     }
 
-    // Cálculos de tiempo
+
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
