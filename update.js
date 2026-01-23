@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import fs from "fs";
 
-const API_KEY = "RGAPI-a0be21b2-2d89-4313-8b15-09967c369bcd";
+const API_KEY = "RGAPI-8b8675ce-19b3-4bc9-affa-9ae50e738339";
 const REGION = "americas"; // account-v1
 const PLATFORM = "la2";    // la2 / la1 / br1, etc
 
@@ -64,7 +64,7 @@ async function getPlayerData(puuid) {
     return {
       name: `${acc.gameName}#${acc.tagLine}`,
       tier: "UNRANKED",
-      rank: I,
+      rank: null,
       leaguePoints: 0,
       wins: 0,
       losses: 0
