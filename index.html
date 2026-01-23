@@ -256,6 +256,8 @@ function updateCountdown() {
                 const wr = total > 0 ? Math.round((user.wins / total) * 100) : 0;
                 const opggName = user.name.replace('#', '-');
                 const opggUrl = `https://www.op.gg/summoners/las/${encodeURIComponent(opggName)}`;
+				const highTiers = ['MASTER', 'GRANDMASTER', 'CHALLENGER'];
+				const displayRank = highTiers.includes(user.tier.toUpperCase()) ? "" : user.rank;
                 return `
                     <tr class="ladder-row tier-${tierLower}">
                         <td style="color: var(--text-silver); font-weight: bold; width: 40px;">${index + 1}</td>
