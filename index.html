@@ -52,16 +52,14 @@
             color: var(--text-gold);
             font-weight: bold;
         }
-
+		#tournament-timer, .gold-number {
+			font-weight: bold;
+			color var(--text-gold);
+		}
         .gold-number {
             font-size: 0.95rem;
             font-variant-numeric: tabular-nums;
         }
-		#tournament-timer {
-			font-weight: bold;
-			color: #f0e6d2;
-			text-shadow: 0 0 5px rgba(0,0,0,0.5);
-		}
         .ladder {
             width: 100%;
             border-collapse: separate;
@@ -154,8 +152,7 @@
     <div id="info-container">
         <div>Próxima actualización en: <span id="timer">00:00</span></div>
         <div>Máximo de partidas hasta la fecha: <span class="gold-number">128</span></div>
-		<div class="stats-container">Tiempo hasta la finalización del torneo: <span class="gold-number" id="tournament-timer"></span></div>
-</div>
+		<div>Tiempo hasta la finalizacion del torneo: <span id="tournament-timer"></span></div>
     </div>
 
     <div id="loading">Cargando...</div>
@@ -182,7 +179,7 @@ function updateCountdown() {
 
     const diff = nextUpdate - now;
 
-
+    // Calculamos solo minutos y segundos
     const totalSeconds = Math.floor(diff / 1000);
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
@@ -191,7 +188,7 @@ function updateCountdown() {
     
     const timerElement = document.getElementById('timer');
     
-
+    // Mostramos solo MM:SS
     timerElement.innerText = `${format(minutes)}:${format(seconds)}`;
 
 
@@ -213,21 +210,17 @@ function updateCountdown() {
         }
     }
 }
-
-    const rankOrder = { "CHALLENGER": 10, "GRANDMASTER": 9, "MASTER": 8, "DIAMOND": 7, "EMERALD": 6, "PLATINUM": 5, "GOLD": 4, "SILVER": 3, "BRONZE": 2, "IRON": 1, "UNRANKED": 0 };
-    const divisionOrder = { "I": 4, "II": 3, "III": 2, "IV": 1 };
-	
 	function updateTournamentCountdown() {
-    const targetDate = new Date("April 29, 2026 00:00:00").getTime(); 
+    const targetDate = new Date("April 29, 2024 00:00:00").getTime(); // Ajusta el año si es 2025
     const now = new Date().getTime();
     const diff = targetDate - now;
 
     if (diff <= 0) {
-        document.getElementById('tournament-timer').innerText = "¡SE ACABO AL CARAJO!";
+        document.getElementById('tournament-timer').innerText = "¡TORNEO FINALIZADO!";
         return;
     }
 
-
+    // Cálculos de tiempo
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
@@ -237,13 +230,15 @@ function updateCountdown() {
 
     document.getElementById('tournament-timer').innerText = 
         `${days}D ${format(hours)}H ${format(minutes)}M ${format(seconds)}S`;
-}
-
+	}
 
 	setInterval(() => {
 		updateCountdown();           
 		updateTournamentCountdown(); 
 	}, 1000);
+    const rankOrder = { "CHALLENGER": 10, "GRANDMASTER": 9, "MASTER": 8, "DIAMOND": 7, "EMERALD": 6, "PLATINUM": 5, "GOLD": 4, "SILVER": 3, "BRONZE": 2, "IRON": 1, "UNRANKED": 0 };
+    const divisionOrder = { "I": 4, "II": 3, "III": 2, "IV": 1 };
+
     async function loadLadder() {
         try {
             const response = await fetch('ladder_data.json');
