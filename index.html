@@ -53,8 +53,8 @@
             font-weight: bold;
         }
 		#tournament-timer, .gold-number {
-			font-weight: bold;
 			color var(--text-gold);
+			font-weight: bold;
 		}
         .gold-number {
             font-size: 0.95rem;
@@ -210,12 +210,12 @@ function updateCountdown() {
     }
 }
 	function updateTournamentCountdown() {
-    const targetDate = new Date("April 29, 2026 00:00:00").getTime(); // Ajusta el año si es 2025
+    const targetDate = new Date("April 29, 2026 00:00:00").getTime();
     const now = new Date().getTime();
     const diff = targetDate - now;
 
     if (diff <= 0) {
-        document.getElementById('tournament-timer').innerText = "¡TORNEO FINALIZADO!";
+        document.getElementById('tournament-timer').innerText = "¡SE ACABO AL CARAJO!";
         return;
     }
 
@@ -228,7 +228,7 @@ function updateCountdown() {
     const format = (num) => num.toString().padStart(2, '0');
 
     document.getElementById('tournament-timer').innerText = 
-        `${days}D ${format(hours)}H ${format(minutes)}M ${format(seconds)}S`;
+        `${days}D ${format(hours)}:${format(minutes)}:${format(seconds)}`;
 	}
 
 	setInterval(() => {
