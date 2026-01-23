@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BORRALO A LA MIERDA</title>
+    <title>BORRALO A LA MIERDA - EL TORNEITO</title>
     <style>
         :root {
             --bg-color: #05070a;
@@ -150,6 +150,8 @@
     <div id="info-container">
         <div>Próxima actualización en: <span id="timer">00:00:00</span></div>
         <div>Máximo de partidas hasta la fecha: <span class="gold-number">128</span></div>
+		<div class="stats-container"> <p>Tiempo hasta la finalización del torneo: <span id="tournament-timer"></span></p>
+</div>
     </div>
 
     <div id="loading">Cargando...</div>
@@ -176,7 +178,6 @@ function updateCountdown() {
 
     const diff = nextUpdate - now;
 
-    // Calculamos solo minutos y segundos
     const totalSeconds = Math.floor(diff / 1000);
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
@@ -184,8 +185,7 @@ function updateCountdown() {
     const format = (num) => num.toString().padStart(2, '0');
     
     const timerElement = document.getElementById('timer');
-    
-    // Mostramos solo MM:SS
+
     timerElement.innerText = `${format(minutes)}:${format(seconds)}`;
 
 
@@ -207,12 +207,32 @@ function updateCountdown() {
         }
     }
 }
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-
     const rankOrder = { "CHALLENGER": 10, "GRANDMASTER": 9, "MASTER": 8, "DIAMOND": 7, "EMERALD": 6, "PLATINUM": 5, "GOLD": 4, "SILVER": 3, "BRONZE": 2, "IRON": 1, "UNRANKED": 0 };
     const divisionOrder = { "I": 4, "II": 3, "III": 2, "IV": 1 };
+	function updateTournamentCountdown() {
+    const targetDate = new Date("April 29, 2026 00:00:00").getTime();
+    const now = new Date().getTime();
+    const diff = targetDate - now;
 
+    if (diff <= 0) {
+        document.getElementById('tournament-timer').innerText = "¡SE ACABO AL CARAJO!";
+        return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    const format = (num) => num.toString().padStart(2, '0');
+
+    document.getElementById('tournament-timer').innerText = 
+        `${days}D ${format(hours)}H ${format(minutes)}M ${format(seconds)}S`;
+	}
+	setInterval(() => {
+		updateCountdown();
+		updateTournamentCountdown();
+	}, 1000);
     async function loadLadder() {
         try {
             const response = await fetch('ladder_data.json');
