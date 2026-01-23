@@ -228,7 +228,7 @@ function updateCountdown() {
     const format = (num) => num.toString().padStart(2, '0');
 
     document.getElementById('tournament-timer').innerText = 
-        `${days} D ${format(hours)}:${format(minutes)}:${format(seconds)}`;
+        `${days}D ${format(hours)}:${format(minutes)}:${format(seconds)}`;
 	}
 
 	setInterval(() => {
