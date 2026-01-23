@@ -148,11 +148,21 @@
     <h1>LA FOKIN LADDER</h1>
     
     <div id="info-container">
-        <div>Próxima actualización en: <span id="timer">00:00:00</span></div>
-        <div>Máximo de partidas hasta la fecha: <span class="gold-number">128</span></div>
-		<div class="stats-container"> <p>Tiempo hasta la finalización del torneo: <span id="tournament-timer"></span></p>
-</div>
+        <div class="stats-item">
+            Tiempo hasta la finalización del torneo: <span class="gold-number" id="tournament-timer"></span>
+        </div>
+
+        <div class="stats-item">
+            Máximo de partidas hasta la fecha: <span class="gold-number">128</span>
+        </div>
+
+        <div class="stats-item">
+            Próxima actualización en: <span class="gold-number" id="timer">00:00</span>
+        </div>
     </div>
+
+    <div id="ladder-data"></div>
+</div>
 
     <div id="loading">Cargando...</div>
 
