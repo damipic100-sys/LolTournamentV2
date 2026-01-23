@@ -71,11 +71,22 @@ async function getPlayerData(puuid) {
     };
   }
 
-  // RANKED
+
+  const tier = soloQ.tier; 
+  let rank = soloQ.rank;  
+
+
+  const highTiers = ["MASTER", "GRANDMASTER", "CHALLENGER"];
+
+
+  if (highTiers.includes(tier.toUpperCase())) {
+    rank = ""; 
+  }
+
   return {
     name: `${acc.gameName}#${acc.tagLine}`,
-    tier: soloQ.tier,
-    rank: soloQ.rank,
+    tier: tier,
+    rank: rank,
     leaguePoints: soloQ.leaguePoints,
     wins: soloQ.wins,
     losses: soloQ.losses
