@@ -64,7 +64,7 @@ async function getPlayerData(puuid) {
     return {
       name: `${acc.gameName}#${acc.tagLine}`,
       tier: "UNRANKED",
-      rank: null,
+      rank: I,
       leaguePoints: 0,
       wins: 0,
       losses: 0
@@ -76,7 +76,7 @@ async function getPlayerData(puuid) {
   let rank = soloQ.rank;  
 
 
-  const highTiers = ["MASTER", "GRANDMASTER", "CHALLENGER"];
+  const highTiers = ["MASTER", "GRANDMASTER", "CHALLENGER", "UNRANKED"];
 
 
   if (highTiers.includes(tier.toUpperCase())) {
