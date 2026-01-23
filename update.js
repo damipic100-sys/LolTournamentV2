@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import fs from "fs";
 
-const API_KEY = "RGAPI-8b8675ce-19b3-4bc9-affa-9ae50e738339";
+const API_KEY = "RGAPI-7e24b081-f9ed-4da0-8672-fc9107fef35c";
 const REGION = "americas"; // account-v1
 const PLATFORM = "la2";    // la2 / la1 / br1, etc
 
