@@ -1,14 +1,94 @@
 [
   {
-    "name": "undefined#undefined",
+    "name": "Zair#Zaza",
+    "tier": "MASTER",
+    "rank": "",
+    "leaguePoints": 126,
+    "wins": 70,
+    "losses": 58
+  },
+  {
+    "name": "Trastornado#FKC",
+    "tier": "MASTER",
+    "rank": "",
+    "leaguePoints": 29,
+    "wins": 96,
+    "losses": 69
+  },
+  {
+    "name": "pør casi un G6#FKC",
+    "tier": "MASTER",
+    "rank": "",
+    "leaguePoints": 62,
+    "wins": 87,
+    "losses": 65
+  },
+  {
+    "name": "Gwungle Account#ARG",
+    "tier": "DIAMOND",
+    "rank": "III",
+    "leaguePoints": 39,
+    "wins": 73,
+    "losses": 65
+  },
+  {
+    "name": "we1rdcat#uwu",
+    "tier": "DIAMOND",
+    "rank": "IV",
+    "leaguePoints": 0,
+    "wins": 47,
+    "losses": 52
+  },
+  {
+    "name": "FernecitoConCoca#ARG",
+    "tier": "DIAMOND",
+    "rank": "IV",
+    "leaguePoints": 0,
+    "wins": 23,
+    "losses": 25
+  },
+  {
+    "name": "Tobi Soabe#LAS",
+    "tier": "PLATINUM",
+    "rank": "II",
+    "leaguePoints": 36,
+    "wins": 11,
+    "losses": 8
+  },
+  {
+    "name": "Lushoto#uwu",
     "tier": "PLATINUM",
     "rank": "IV",
-    "leaguePoints": 82,
-    "wins": 25,
+    "leaguePoints": 75,
+    "wins": 24,
+    "losses": 24
+  },
+  {
+    "name": "Yuka Okkotsu#77777",
+    "tier": "PLATINUM",
+    "rank": "III",
+    "leaguePoints": 9,
+    "wins": 58,
+    "losses": 59
+  },
+  {
+    "name": "Arturo Illia#ARG",
+    "tier": "EMERALD",
+    "rank": "IV",
+    "leaguePoints": 1,
+    "wins": 59,
+    "losses": 42
+  },
+  {
+    "name": "GodTDJ#IAN",
+    "tier": "PLATINUM",
+    "rank": "III",
+    "leaguePoints": 9,
+    "wins": 26,
     "losses": 20
   },
   {
-    "name": "undefined#undefined",
+    "name": "Aśoka Vardhana#HDS",
     "tier": "GOLD",
     "rank": "IV",
     "leaguePoints": 0,
@@ -16,7 +96,7 @@
     "losses": 26
   },
   {
-    "name": "undefined#undefined",
+    "name": "grande y grueso#7518",
     "tier": "PLATINUM",
     "rank": "IV",
     "leaguePoints": 36,
@@ -24,7 +104,7 @@
     "losses": 33
   },
   {
-    "name": "undefined#undefined",
+    "name": "ZeeKy#1919",
     "tier": "EMERALD",
     "rank": "IV",
     "leaguePoints": 8,
@@ -32,7 +112,7 @@
     "losses": 35
   },
   {
-    "name": "undefined#undefined",
+    "name": "el extraño caso#er9",
     "tier": "GOLD",
     "rank": "II",
     "leaguePoints": 79,
@@ -40,7 +120,7 @@
     "losses": 33
   },
   {
-    "name": "undefined#undefined",
+    "name": "Gonzaloo0407#LAS",
     "tier": "SILVER",
     "rank": "I",
     "leaguePoints": 55,
