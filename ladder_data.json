@@ -65,11 +65,11 @@
   },
   {
     "name": "Yuka Okkotsu#77777",
-    "tier": "PLATINUM",
-    "rank": "IV",
-    "leaguePoints": 0,
+    "tier": "GOLD",
+    "rank": "I",
+    "leaguePoints": 75,
     "wins": 66,
-    "losses": 74
+    "losses": 75
   },
   {
     "name": "Arturo Illia#ARG",
@@ -163,8 +163,8 @@
     "name": "Samurai Sword#LAS",
     "tier": "DIAMOND",
     "rank": "II",
-    "leaguePoints": 37,
-    "wins": 31,
+    "leaguePoints": 60,
+    "wins": 32,
     "losses": 25
   },
   {
