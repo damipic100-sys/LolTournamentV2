@@ -1,11 +1,11 @@
 [
   {
     "name": "Zair#Zaza",
-    "tier": "MASTER",
-    "rank": "",
-    "leaguePoints": 0,
+    "tier": "DIAMOND",
+    "rank": "I",
+    "leaguePoints": 75,
     "wins": 93,
-    "losses": 87
+    "losses": 88
   },
   {
     "name": "Trastornado#FKC",
@@ -35,8 +35,8 @@
     "name": "we1rdcat#uwu",
     "tier": "DIAMOND",
     "rank": "III",
-    "leaguePoints": 41,
-    "wins": 56,
+    "leaguePoints": 60,
+    "wins": 57,
     "losses": 54
   },
   {
