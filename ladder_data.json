@@ -1,1 +1,90 @@
-[]
+[
+  {
+    "name": "alejandro magno#HDS",
+    "tier": "SILVER",
+    "rank": "II",
+    "leaguePoints": 73,
+    "wins": 29,
+    "losses": 31
+  },
+  {
+    "name": "MatiC3#CDE",
+    "tier": "PLATINUM",
+    "rank": "II",
+    "leaguePoints": 27,
+    "wins": 13,
+    "losses": 5
+  },
+  {
+    "name": "Pachu#777",
+    "tier": "UNRANKED",
+    "rank": "",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Samurai Sword#LAS",
+    "tier": "MASTER",
+    "rank": "",
+    "leaguePoints": 58,
+    "wins": 53,
+    "losses": 41
+  },
+  {
+    "name": "Bizkochito#2000",
+    "tier": "UNRANKED",
+    "rank": "",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Chal0#LAS",
+    "tier": "PLATINUM",
+    "rank": "III",
+    "leaguePoints": 17,
+    "wins": 5,
+    "losses": 2
+  },
+  {
+    "name": "Rapisher#LAS",
+    "tier": "GOLD",
+    "rank": "IV",
+    "leaguePoints": 0,
+    "wins": 22,
+    "losses": 23
+  },
+  {
+    "name": "Fl1cka#G2G2",
+    "tier": "UNRANKED",
+    "rank": "",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Mïlls#DHW",
+    "tier": "UNRANKED",
+    "rank": "",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Gengis Kan#HDS",
+    "tier": "BRONZE",
+    "rank": "IV",
+    "leaguePoints": 32,
+    "wins": 3,
+    "losses": 3
+  },
+  {
+    "name": "OTK JuanCarlos#OTK",
+    "tier": "GOLD",
+    "rank": "III",
+    "leaguePoints": 87,
+    "wins": 7,
+    "losses": 1
+  }
+]
