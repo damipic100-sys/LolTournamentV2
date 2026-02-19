@@ -3,9 +3,9 @@
     "name": "Zair#Zaza",
     "tier": "MASTER",
     "rank": "",
-    "leaguePoints": 353,
+    "leaguePoints": 311,
     "wins": 185,
-    "losses": 161
+    "losses": 163
   },
   {
     "name": "Trastornado#FKC",
@@ -146,9 +146,9 @@
   {
     "name": "MatiC3#CDE",
     "tier": "PLATINUM",
-    "rank": "II",
-    "leaguePoints": 67,
-    "wins": 16,
+    "rank": "I",
+    "leaguePoints": 27,
+    "wins": 18,
     "losses": 10
   },
   {
@@ -163,8 +163,8 @@
     "name": "Samurai Sword#LAS",
     "tier": "MASTER",
     "rank": "",
-    "leaguePoints": 28,
-    "wins": 54,
+    "leaguePoints": 48,
+    "wins": 55,
     "losses": 44
   },
   {
@@ -218,9 +218,9 @@
   {
     "name": "OTK JuanCarlos#OTK",
     "tier": "GOLD",
-    "rank": "III",
-    "leaguePoints": 77,
-    "wins": 7,
+    "rank": "II",
+    "leaguePoints": 7,
+    "wins": 8,
     "losses": 2
   }
 ]
