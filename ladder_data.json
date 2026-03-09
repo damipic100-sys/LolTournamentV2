@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "name": "Chal0#LAS",
+    "tier": "PLATINUM",
+    "rank": "II",
+    "leaguePoints": 97,
+    "wins": 12,
+    "losses": 9
+  },
+  {
+    "name": "Rapisher#LAS",
+    "tier": "GOLD",
+    "rank": "III",
+    "leaguePoints": 9,
+    "wins": 30,
+    "losses": 29
+  },
+  {
+    "name": "Fl1cka#G2G2",
+    "tier": "UNRANKED",
+    "rank": "",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Mïlls#DHW",
+    "tier": "UNRANKED",
+    "rank": "",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Gengis Kan#HDS",
+    "tier": "BRONZE",
+    "rank": "IV",
+    "leaguePoints": 46,
+    "wins": 4,
+    "losses": 4
+  },
+  {
+    "name": "OTK JuanCarlos#OTK",
+    "tier": "PLATINUM",
+    "rank": "II",
+    "leaguePoints": 62,
+    "wins": 24,
+    "losses": 7
+  }
+]
