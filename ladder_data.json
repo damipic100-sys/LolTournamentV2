@@ -36,8 +36,8 @@
     "tier": "MASTER",
     "rank": "",
     "leaguePoints": 0,
-    "wins": 148,
-    "losses": 140
+    "wins": 149,
+    "losses": 141
   },
   {
     "name": "FernecitoConCoca#ARG",
@@ -139,9 +139,9 @@
     "name": "alejandro magno#HDS",
     "tier": "SILVER",
     "rank": "I",
-    "leaguePoints": 46,
+    "leaguePoints": 28,
     "wins": 42,
-    "losses": 46
+    "losses": 47
   },
   {
     "name": "MatiC3#CDE",
@@ -219,8 +219,8 @@
     "name": "OTK JuanCarlos#OTK",
     "tier": "PLATINUM",
     "rank": "II",
-    "leaguePoints": 42,
-    "wins": 24,
-    "losses": 9
+    "leaguePoints": 62,
+    "wins": 25,
+    "losses": 10
   }
 ]
