@@ -29,15 +29,15 @@
     "rank": "III",
     "leaguePoints": 68,
     "wins": 170,
-    "losses": 165
+    "losses": 166
   },
   {
     "name": "we1rdcat#uwu",
-    "tier": "MASTER",
-    "rank": "",
-    "leaguePoints": 0,
-    "wins": 151,
-    "losses": 146
+    "tier": "DIAMOND",
+    "rank": "I",
+    "leaguePoints": 76,
+    "wins": 152,
+    "losses": 148
   },
   {
     "name": "FernecitoConCoca#ARG",
@@ -59,17 +59,17 @@
     "name": "Lushoto#uwu",
     "tier": "PLATINUM",
     "rank": "IV",
-    "leaguePoints": 21,
-    "wins": 43,
+    "leaguePoints": 41,
+    "wins": 44,
     "losses": 50
   },
   {
     "name": "Yuka Okkotsu#77777",
     "tier": "PLATINUM",
     "rank": "I",
-    "leaguePoints": 47,
-    "wins": 252,
-    "losses": 247
+    "leaguePoints": 48,
+    "wins": 253,
+    "losses": 248
   },
   {
     "name": "Arturo Illia#ARG",
@@ -91,8 +91,8 @@
     "name": "RICARDO IORIO#HDS",
     "tier": "GOLD",
     "rank": "IV",
-    "leaguePoints": 29,
-    "wins": 56,
+    "leaguePoints": 47,
+    "wins": 57,
     "losses": 72
   },
   {
@@ -139,17 +139,17 @@
     "name": "alejandro magno#HDS",
     "tier": "SILVER",
     "rank": "I",
-    "leaguePoints": 76,
-    "wins": 45,
-    "losses": 48
+    "leaguePoints": 62,
+    "wins": 46,
+    "losses": 50
   },
   {
     "name": "MatiC3#CDE",
     "tier": "EMERALD",
     "rank": "IV",
-    "leaguePoints": 93,
-    "wins": 29,
-    "losses": 23
+    "leaguePoints": 99,
+    "wins": 30,
+    "losses": 24
   },
   {
     "name": "Pachu#777",
@@ -218,9 +218,9 @@
   {
     "name": "OTK JuanCarlos#OTK",
     "tier": "PLATINUM",
-    "rank": "II",
-    "leaguePoints": 62,
-    "wins": 25,
+    "rank": "IV",
+    "leaguePoints": 77,
+    "wins": 26,
     "losses": 10
   }
 ]
