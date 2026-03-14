@@ -1,1 +1,226 @@
-[]
+[
+  {
+    "name": "Zair#Zaza",
+    "tier": "MASTER",
+    "rank": "",
+    "leaguePoints": 292,
+    "wins": 249,
+    "losses": 228
+  },
+  {
+    "name": "volvé camila#MISSU",
+    "tier": "DIAMOND",
+    "rank": "I",
+    "leaguePoints": 96,
+    "wins": 200,
+    "losses": 183
+  },
+  {
+    "name": "pør casi un G6#FKC",
+    "tier": "MASTER",
+    "rank": "",
+    "leaguePoints": 311,
+    "wins": 217,
+    "losses": 190
+  },
+  {
+    "name": "Gwungle Account#ARG",
+    "tier": "DIAMOND",
+    "rank": "III",
+    "leaguePoints": 7,
+    "wins": 172,
+    "losses": 171
+  },
+  {
+    "name": "we1rdcat#uwu",
+    "tier": "DIAMOND",
+    "rank": "II",
+    "leaguePoints": 61,
+    "wins": 162,
+    "losses": 164
+  },
+  {
+    "name": "FernecitoConCoca#ARG",
+    "tier": "DIAMOND",
+    "rank": "IV",
+    "leaguePoints": 19,
+    "wins": 41,
+    "losses": 46
+  },
+  {
+    "name": "Tobi Soabe#LAS",
+    "tier": "EMERALD",
+    "rank": "III",
+    "leaguePoints": 64,
+    "wins": 31,
+    "losses": 28
+  },
+  {
+    "name": "Lushoto#uwu",
+    "tier": "PLATINUM",
+    "rank": "IV",
+    "leaguePoints": 41,
+    "wins": 44,
+    "losses": 50
+  },
+  {
+    "name": "Yuka Okkotsu#77777",
+    "tier": "PLATINUM",
+    "rank": "II",
+    "leaguePoints": 91,
+    "wins": 256,
+    "losses": 255
+  },
+  {
+    "name": "Arturo Illia#ARG",
+    "tier": "EMERALD",
+    "rank": "I",
+    "leaguePoints": 42,
+    "wins": 112,
+    "losses": 88
+  },
+  {
+    "name": "GodTDJ#IAN",
+    "tier": "PLATINUM",
+    "rank": "II",
+    "leaguePoints": 10,
+    "wins": 38,
+    "losses": 33
+  },
+  {
+    "name": "RICARDO IORIO#HDS",
+    "tier": "GOLD",
+    "rank": "IV",
+    "leaguePoints": 47,
+    "wins": 57,
+    "losses": 72
+  },
+  {
+    "name": "grande y grueso#7518",
+    "tier": "GOLD",
+    "rank": "II",
+    "leaguePoints": 4,
+    "wins": 76,
+    "losses": 81
+  },
+  {
+    "name": "ZeeKy#1919",
+    "tier": "EMERALD",
+    "rank": "I",
+    "leaguePoints": 75,
+    "wins": 80,
+    "losses": 42
+  },
+  {
+    "name": "el extraño caso#er9",
+    "tier": "PLATINUM",
+    "rank": "IV",
+    "leaguePoints": 0,
+    "wins": 52,
+    "losses": 50
+  },
+  {
+    "name": "Gonzaloo0407#LAS",
+    "tier": "GOLD",
+    "rank": "III",
+    "leaguePoints": 92,
+    "wins": 23,
+    "losses": 16
+  },
+  {
+    "name": "abrilcitauwu#7113",
+    "tier": "SILVER",
+    "rank": "II",
+    "leaguePoints": 43,
+    "wins": 55,
+    "losses": 62
+  },
+  {
+    "name": "alejandro magno#HDS",
+    "tier": "SILVER",
+    "rank": "I",
+    "leaguePoints": 81,
+    "wins": 52,
+    "losses": 55
+  },
+  {
+    "name": "MatiC3#CDE",
+    "tier": "EMERALD",
+    "rank": "IV",
+    "leaguePoints": 99,
+    "wins": 30,
+    "losses": 24
+  },
+  {
+    "name": "Pachu#777",
+    "tier": "UNRANKED",
+    "rank": "",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Samurai Sword#LAS",
+    "tier": "DIAMOND",
+    "rank": "I",
+    "leaguePoints": 56,
+    "wins": 56,
+    "losses": 50
+  },
+  {
+    "name": "Bizkochito#2000",
+    "tier": "UNRANKED",
+    "rank": "",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Chal0#LAS",
+    "tier": "PLATINUM",
+    "rank": "I",
+    "leaguePoints": 27,
+    "wins": 13,
+    "losses": 9
+  },
+  {
+    "name": "Rapisher#LAS",
+    "tier": "GOLD",
+    "rank": "III",
+    "leaguePoints": 9,
+    "wins": 30,
+    "losses": 29
+  },
+  {
+    "name": "Fl1cka#G2G2",
+    "tier": "UNRANKED",
+    "rank": "",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Mïlls#DHW",
+    "tier": "UNRANKED",
+    "rank": "",
+    "leaguePoints": 0,
+    "wins": 0,
+    "losses": 0
+  },
+  {
+    "name": "Gengis Kan#HDS",
+    "tier": "BRONZE",
+    "rank": "III",
+    "leaguePoints": 3,
+    "wins": 8,
+    "losses": 8
+  },
+  {
+    "name": "OTK JuanCarlos#OTK",
+    "tier": "PLATINUM",
+    "rank": "IV",
+    "leaguePoints": 77,
+    "wins": 26,
+    "losses": 10
+  }
+]
