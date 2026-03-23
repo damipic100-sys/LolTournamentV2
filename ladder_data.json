@@ -1,6 +1,94 @@
 [
   {
-    "name": "undefined#undefined",
+    "name": "Zair#Zaza",
+    "tier": "MASTER",
+    "rank": "",
+    "leaguePoints": 292,
+    "wins": 256,
+    "losses": 239
+  },
+  {
+    "name": "volvé camila#MISSU",
+    "tier": "MASTER",
+    "rank": "",
+    "leaguePoints": 1,
+    "wins": 207,
+    "losses": 193
+  },
+  {
+    "name": "pør casi un G6#FKC",
+    "tier": "MASTER",
+    "rank": "",
+    "leaguePoints": 377,
+    "wins": 235,
+    "losses": 208
+  },
+  {
+    "name": "Gwungle Account#ARG",
+    "tier": "DIAMOND",
+    "rank": "IV",
+    "leaguePoints": 56,
+    "wins": 176,
+    "losses": 176
+  },
+  {
+    "name": "we1rdcat#uwu",
+    "tier": "DIAMOND",
+    "rank": "II",
+    "leaguePoints": 85,
+    "wins": 183,
+    "losses": 184
+  },
+  {
+    "name": "FernecitoConCoca#ARG",
+    "tier": "DIAMOND",
+    "rank": "IV",
+    "leaguePoints": 19,
+    "wins": 41,
+    "losses": 46
+  },
+  {
+    "name": "Tobi Soabe#LAS",
+    "tier": "EMERALD",
+    "rank": "III",
+    "leaguePoints": 64,
+    "wins": 31,
+    "losses": 28
+  },
+  {
+    "name": "Lushoto#uwu",
+    "tier": "PLATINUM",
+    "rank": "III",
+    "leaguePoints": 3,
+    "wins": 49,
+    "losses": 53
+  },
+  {
+    "name": "Yuka Okkotsu#77777",
+    "tier": "PLATINUM",
+    "rank": "III",
+    "leaguePoints": 62,
+    "wins": 284,
+    "losses": 289
+  },
+  {
+    "name": "Arturo Illia#ARG",
+    "tier": "EMERALD",
+    "rank": "II",
+    "leaguePoints": 73,
+    "wins": 112,
+    "losses": 91
+  },
+  {
+    "name": "GodTDJ#IAN",
+    "tier": "PLATINUM",
+    "rank": "II",
+    "leaguePoints": 60,
+    "wins": 41,
+    "losses": 34
+  },
+  {
+    "name": "RICARDO IORIO#HDS",
     "tier": "GOLD",
     "rank": "IV",
     "leaguePoints": 47,
@@ -8,7 +96,7 @@
     "losses": 72
   },
   {
-    "name": "undefined#undefined",
+    "name": "grande y grueso#7518",
     "tier": "GOLD",
     "rank": "II",
     "leaguePoints": 84,
@@ -32,7 +120,7 @@
     "losses": 51
   },
   {
-    "name": "undefined#undefined",
+    "name": "Gonzaloo0407#LAS",
     "tier": "GOLD",
     "rank": "III",
     "leaguePoints": 92,
